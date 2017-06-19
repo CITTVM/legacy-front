@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 19, 2017 11:43:00 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Application.Prestamo" table="prestamo" catalog="legacy" optimistic-lock="version">
+        <id name="idPrestamo" type="java.lang.Integer">
+            <column name="Id_prestamo" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaInicio" type="date">
+            <column name="Fecha_inicio" length="10" not-null="true" />
+        </property>
+        <property name="fechaTermino" type="date">
+            <column name="Fecha_termino" length="10" not-null="true" />
+        </property>
+        <property name="estado" type="boolean">
+            <column name="Estado" not-null="true" />
+        </property>
+        <property name="idSolicitante" type="int">
+            <column name="Id_solicitante" not-null="true" />
+        </property>
+        <property name="idEncargado" type="int">
+            <column name="Id_encargado" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

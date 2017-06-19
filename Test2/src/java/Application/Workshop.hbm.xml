@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 19, 2017 11:43:00 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Application.Workshop" table="workshop" catalog="legacy" optimistic-lock="version">
+        <id name="idWorkshop" type="java.lang.Integer">
+            <column name="Id_workshop" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="30" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="60" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="Fecha" length="10" not-null="true" />
+        </property>
+        <property name="cupos" type="int">
+            <column name="Cupos" not-null="true" />
+        </property>
+        <property name="estado" type="boolean">
+            <column name="Estado" not-null="true" />
+        </property>
+        <property name="nombreInstructor" type="string">
+            <column name="Nombre_instructor" length="40" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

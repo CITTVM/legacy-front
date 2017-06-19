@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 19, 2017 11:43:00 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Application.Usuario" table="usuario" catalog="legacy" optimistic-lock="version">
+        <id name="idUsuario" type="java.lang.Integer">
+            <column name="Id_usuario" />
+            <generator class="identity" />
+        </id>
+        <property name="rut" type="string">
+            <column name="Rut" length="10" not-null="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="30" not-null="true" />
+        </property>
+        <property name="apellidoPaterno" type="string">
+            <column name="ApellidoPaterno" length="20" not-null="true" />
+        </property>
+        <property name="apellidoMaterno" type="string">
+            <column name="ApellidoMaterno" length="20" not-null="true" />
+        </property>
+        <property name="idCuenta" type="int">
+            <column name="Id_cuenta" not-null="true" />
+        </property>
+        <property name="idCarrera" type="int">
+            <column name="Id_carrera" not-null="true" />
+        </property>
+        <property name="idTrack" type="int">
+            <column name="Id_track" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

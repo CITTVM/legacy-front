@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 19, 2017 11:43:00 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Application.Cuenta" table="cuenta" catalog="legacy" optimistic-lock="version">
+        <id name="idCuenta" type="java.lang.Integer">
+            <column name="Id_cuenta" />
+            <generator class="identity" />
+        </id>
+        <property name="nickname" type="string">
+            <column name="Nickname" length="20" not-null="true" />
+        </property>
+        <property name="pass" type="string">
+            <column name="Pass" length="20" not-null="true" />
+        </property>
+        <property name="tipoCuenta" type="string">
+            <column name="Tipo_cuenta" length="15" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
