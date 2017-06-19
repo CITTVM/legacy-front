@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-06-2017 18:14:25 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cl.model.pojos.Prestamo" table="prestamo" catalog="legacy" optimistic-lock="version">
+        <id name="idPrestamo" type="java.lang.Integer">
+            <column name="Id_prestamo" />
+            <generator class="identity" />
+        </id>
+        <property name="fechaInicio" type="date">
+            <column name="Fecha_inicio" length="10" not-null="true" />
+        </property>
+        <property name="fechaTermino" type="date">
+            <column name="Fecha_termino" length="10" not-null="true" />
+        </property>
+        <property name="estado" type="java.lang.Boolean">
+            <column name="Estado" />
+        </property>
+        <property name="rutSolicitante" type="string">
+            <column name="Rut_solicitante" length="10" not-null="true" />
+        </property>
+        <property name="nombreSolicitante" type="string">
+            <column name="Nombre_solicitante" length="15" not-null="true" />
+        </property>
+        <property name="apellidosSolicitante" type="string">
+            <column name="Apellidos_solicitante" length="30" not-null="true" />
+        </property>
+        <property name="idEncargado" type="int">
+            <column name="Id_encargado" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

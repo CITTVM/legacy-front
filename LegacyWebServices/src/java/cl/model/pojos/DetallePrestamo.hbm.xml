@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-06-2017 18:14:25 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cl.model.pojos.DetallePrestamo" table="detalle_prestamo" catalog="legacy" optimistic-lock="version">
+        <id name="idDetalle" type="java.lang.Integer">
+            <column name="Id_detalle" />
+            <generator class="identity" />
+        </id>
+        <property name="cantidad" type="java.lang.Integer">
+            <column name="Cantidad" />
+        </property>
+        <property name="idArticulo" type="int">
+            <column name="Id_articulo" not-null="true" />
+        </property>
+        <property name="idPrestamo" type="int">
+            <column name="Id_prestamo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19-06-2017 18:14:25 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="cl.model.pojos.Boletin" table="boletin" catalog="legacy" optimistic-lock="version">
+        <id name="idBoletin" type="java.lang.Integer">
+            <column name="Id_boletin" />
+            <generator class="identity" />
+        </id>
+        <property name="titulo" type="string">
+            <column name="Titulo" length="30" not-null="true" />
+        </property>
+        <property name="descripcion" type="string">
+            <column name="Descripcion" length="60" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="Fecha" length="10" not-null="true" />
+        </property>
+        <property name="estado" type="boolean">
+            <column name="estado" not-null="true" />
+        </property>
+        <property name="idAutor" type="java.lang.Integer">
+            <column name="Id_autor" />
+        </property>
+    </class>
+</hibernate-mapping>
