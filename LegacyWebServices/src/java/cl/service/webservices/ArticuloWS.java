@@ -28,4 +28,5 @@ public class ArticuloWS {
         List<Articulo> listaArticulos = articuloDAO.findAll();
         return listaArticulos;
     }
+    
 }

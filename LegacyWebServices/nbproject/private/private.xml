@@ -3,9 +3,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Documentos/NetBeansProjects/LegacyWebServices/src/java/cl/model/dao/HibernateUtil.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/LegacyWebServices/src/java/cl/model/dao/ArticuloDAO.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/LegacyWebServices/src/java/cl/service/webservices/ArticuloWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/PrestamoWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/InscripcionesDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/TrackWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/InscripcionesWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/ParticipantesWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/ParticipantesDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/CuentaDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/BoletinWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/ProyectoDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/CarreraDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/UsuarioDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/CuentaWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/BoletinDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/UsuarioWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/CarreraWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/TrackDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/HibernateUtil.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/ArticuloDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/WorkshopWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/PrestamoDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/WorkshopDAO.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/ArticuloWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/DetallePrestamoWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/service/webservices/ProyectoWS.java</file>
+            <file>file:/Users/camilo/Documents/Desarrollo/legacy-front/LegacyWebServices/src/java/cl/model/dao/DetallePrestamoDAO.java</file>
         </group>
     </open-files>
 </project-private>

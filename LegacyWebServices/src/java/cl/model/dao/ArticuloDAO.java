@@ -71,4 +71,5 @@ public class ArticuloDAO {
         session.close();
         return lista;
     }
+    
 }

@@ -4,6 +4,39 @@
     <service name="ArticuloWS">
       <implementation-class>cl.service.webservices.ArticuloWS</implementation-class>
     </service>
+    <service name="WorkshopWS">
+      <implementation-class>cl.service.webservices.WorkshopWS</implementation-class>
+    </service>
+    <service name="UsuarioWS">
+      <implementation-class>cl.service.webservices.UsuarioWS</implementation-class>
+    </service>
+    <service name="TrackWS">
+      <implementation-class>cl.service.webservices.TrackWS</implementation-class>
+    </service>
+    <service name="ProyectoWS">
+      <implementation-class>cl.service.webservices.ProyectoWS</implementation-class>
+    </service>
+    <service name="PrestamoWS">
+      <implementation-class>cl.service.webservices.PrestamoWS</implementation-class>
+    </service>
+    <service name="ParticipantesWS">
+      <implementation-class>cl.service.webservices.ParticipantesWS</implementation-class>
+    </service>
+    <service name="InscripcionesWS">
+      <implementation-class>cl.service.webservices.InscripcionesWS</implementation-class>
+    </service>
+    <service name="DetallePrestamoWS">
+      <implementation-class>cl.service.webservices.DetallePrestamoWS</implementation-class>
+    </service>
+    <service name="CuentaWS">
+      <implementation-class>cl.service.webservices.CuentaWS</implementation-class>
+    </service>
+    <service name="CarreraWS">
+      <implementation-class>cl.service.webservices.CarreraWS</implementation-class>
+    </service>
+    <service name="BoletinWS">
+      <implementation-class>cl.service.webservices.BoletinWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>
