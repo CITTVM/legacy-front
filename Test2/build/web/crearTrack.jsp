@@ -1,6 +1,6 @@
 <%-- 
-    Document   : registroAlumno
-    Created on : Jun 19, 2017, 12:34:41 PM
+    Document   : crearTrack
+    Created on : Jun 20, 2017, 12:01:19 AM
     Author     : jordan
 --%>
 
@@ -57,25 +57,30 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form method="post">
-                <h2 class="text-center"><strong>Creación</strong> de cuenta de usuario</h2>
-                <div class="form-group">
-                    <input class="form-control" type="email" name="user-name" placeholder="Nombre de Usuario">
+                <center>
+                <h2 class="text-center">Creacion de Track</h2>
+                <div class="form-group" style="max-width:50%; " >
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group">
-                    <input class="form-control" type="password" name="password" placeholder="Contraseña">
+                <div class="form-group" style="max-width:50%;">
+                    <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
                 </div>
+                               
+                 <div  class="form-group"  >
+                     <text> Lider :   </text>
+                     <select >
+                         <option value="simon">Simon Morales</option>
+                         <option value="jonas">Jonathan Gonzalez</option>
+                         <option value="sergio">Sergio Matamala</option>
+                         <option value="camilo">Camilo liJobs</option>
+                         
+                    </select>
+                </div>                 
+                            
                 <div class="form-group">
-                    <input class="form-control" type="password" name="password-repeat" placeholder="Contraseña (Repetir)">
+                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Articulo</button>
                 </div>
-                <div class="form-group">
-                    <div class="checkbox">
-                        <label class="control-label">
-                            <input type="checkbox">Estoy de acuerdo con las condiciones de uso.</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);">Registrar Cuenta</button>
-                </div><a href="login.jsp" class="already">¿Ya tienes una cuenta? Entra aquí..</a></form>
+             </center></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
@@ -84,3 +89,5 @@
 </body>
 
 </html>
+
+

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : registroAlumno
-    Created on : Jun 19, 2017, 12:34:41 PM
+    Document   : crearCuenta
+    Created on : Jun 19, 2017, 10:28:53 PM
     Author     : jordan
 --%>
 
@@ -57,16 +57,55 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form method="post">
-                <h2 class="text-center"><strong>Creación</strong> de cuenta de usuario</h2>
-                <div class="form-group">
+                <center>
+                <h2 class="text-center"><strong>Creación de cuenta de usuario</strong></h2>
+                <h3 class="text-center">Datos de la cuenta</h3>
+                <div class="form-group" style="max-width:50%; ">
                     <input class="form-control" type="email" name="user-name" placeholder="Nombre de Usuario">
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="max-width:50%; "> 
                     <input class="form-control" type="password" name="password" placeholder="Contraseña">
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="max-width:50%; ">
                     <input class="form-control" type="password" name="password-repeat" placeholder="Contraseña (Repetir)">
                 </div>
+                <h3 class="text-center">Datos Personales</h3>
+                <div class="form-group" style="max-width:50%; ">
+                    <input class="form-control" type="text" name="nombre" placeholder="Nombre Completo">
+                </div>
+                <div class="form-group" style="max-width:50%; ">
+                    <input class="form-control" type="text" name="apelpat" placeholder="Apellido Paterno">
+                </div>
+                <div class="form-group" style="max-width:50%; ">
+                    <input class="form-control" type="text" name="apelmat" placeholder="Apellido Materno">
+                </div>
+                 <div  class="form-group" >
+                     <text> Carrera :  </text>
+                     <select required>
+                         <option value="seleccione">Seleccione..</option>
+                         <option value="ingInformatica">Ingenieria en Informatica</option>
+                         <option value="anaProgramador">Analista Programador</option>
+                         <option value="disenoGrafico">Diseño Grafico</option>
+                         <option value="disenoInstustrial">Diseño Industrial</option>
+                         <option value="disenoVestuario">Diseño de vestuario</option>
+                    </select>
+                </div>
+                <div  class="form-group" >
+                     <text> Track :  </text>
+                     <select required>
+                         <option value="seleccione">Seleccione..</option>
+                         <option value="microControladores">Microcontroladores y Domotica</option>
+                         <option value="desarrolloWeb">Desarrollo Web</option>
+                         <option value="Legos">Legos</option>
+                         <option value="videojuegos">Videojuegos</option>
+                         <option value="appMoviles">Aplicaciones Moviles</option>
+                    </select>
+                </div>
+                
+                
+                
+                
+                
                 <div class="form-group">
                     <div class="checkbox">
                         <label class="control-label">
@@ -74,8 +113,8 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);">Registrar Cuenta</button>
-                </div><a href="login.jsp" class="already">¿Ya tienes una cuenta? Entra aquí..</a></form>
+                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Registrar Cuenta</button>
+                </div><a href="login.jsp" class="already">¿Ya tienes una cuenta? Entra aquí..</a></center></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
@@ -84,3 +123,4 @@
 </body>
 
 </html>
+

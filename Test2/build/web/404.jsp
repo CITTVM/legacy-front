@@ -13,20 +13,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>legacy-landing</title>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="Test2/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ssets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-    <link rel="stylesheet" href="Test2/assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="Test2/assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="Test2/assets/css/Article-Clean.css">
-    <link rel="stylesheet" href="Test2/assets/css/Article-List.css">
-    <link rel="stylesheet" href="Test2/assets/css/Carousel-Hero.css">
-    <link rel="stylesheet" href="Test2/assets/css/Footer-Dark.css">
-    <link rel="stylesheet" href="Test2/assets/css/Login-Form-Dark.css">
-    <link rel="stylesheet" href="Test2/assets/css/Navigation-with-Button1.css">
-    <link rel="stylesheet" href="Test2/assets/css/Projects-Horizontal.css">
-    <link rel="stylesheet" href="Test2/assets/css/Registration-Form-with-Photo.css">
-    <link rel="stylesheet" href="Test2/assets/css/styles.css">
-    <link rel="stylesheet" href="Test2/assets/css/Team-Boxed.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Article-Clean.css">
+    <link rel="stylesheet" href="assets/css/Article-List.css">
+    <link rel="stylesheet" href="assets/css/Carousel-Hero.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button1.css">
+    <link rel="stylesheet" href="assets/css/Projects-Horizontal.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 </head>
 
 <body>
@@ -102,9 +102,9 @@
             </div>
         </footer>
     </div>
-    <script src="Test2/assets/js/jquery.min.js"></script>
-    <script src="Test2/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="Test2/assets/js/bs-animation.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
 </body>
 
 </html>
