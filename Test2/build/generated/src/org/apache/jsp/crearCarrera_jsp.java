@@ -11,10 +11,20 @@ public final class crearCarrera_jsp extends org.apache.jasper.runtime.HttpJspBas
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_url_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -41,6 +51,7 @@ public final class crearCarrera_jsp extends org.apache.jasper.runtime.HttpJspBas
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -96,12 +107,16 @@ public final class crearCarrera_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("    <div class=\"register-photo\">\n");
       out.write("        <div class=\"form-container\">\n");
       out.write("            <div class=\"image-holder\"></div>\n");
-      out.write("            <form method=\"post\">\n");
+      out.write("            <form action=\"");
+      if (_jspx_meth_c_url_0(_jspx_page_context))
+        return;
+      out.write("\" method=\"post\">\n");
+      out.write("                <center>\n");
       out.write("                <h2 class=\"text-center\">Creacion de carreras</h2>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \"> \n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"nombre\" placeholder=\"Nombre de la Carrera\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"escuela\" placeholder=\"Escuela de la Carrera\">\n");
       out.write("                </div>\n");
       out.write("                \n");
@@ -109,8 +124,8 @@ public final class crearCarrera_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("               \n");
       out.write("                \n");
       out.write("                <div class=\"form-group\">\n");
-      out.write("                    <button class=\"btn btn-primary btn-block\" type=\"submit\" style=\"background-color:rgb(43,133,0);\">Agregar Carrera</button>\n");
-      out.write("                </div></form>\n");
+      out.write("                    <button class=\"btn btn-primary btn-block\" type=\"submit\" style=\"background-color:rgb(43,133,0);max-width:50%;\">Agregar Carrera</button>\n");
+      out.write("                </div></center></form>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <script src=\"assets/js/jquery.min.js\"></script>\n");
@@ -131,5 +146,23 @@ public final class crearCarrera_jsp extends org.apache.jasper.runtime.HttpJspBas
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_0.setParent(null);
+    _jspx_th_c_url_0.setValue("/controllerCrearCarrera");
+    int _jspx_eval_c_url_0 = _jspx_th_c_url_0.doStartTag();
+    if (_jspx_th_c_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+    return false;
   }
 }

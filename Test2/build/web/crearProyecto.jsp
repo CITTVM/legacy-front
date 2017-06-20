@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -71,7 +72,7 @@
                 </div>
                 <div  class="form-group"  >
                      <text> Lider :   </text>
-                     <select >
+                     <select name="lider">
                          <option value="simon">Simon Morales</option>
                          <option value="jonas">Jonathan Gonzalez</option>
                          <option value="sergio">Sergio Matamala</option>

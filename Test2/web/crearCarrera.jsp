@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -56,7 +57,7 @@
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            <form action="<c:url value="/controllerCrearCarrera" />" method="post">
                 <center>
                 <h2 class="text-center">Creacion de carreras</h2>
                 <div class="form-group" style="max-width:50%; "> 

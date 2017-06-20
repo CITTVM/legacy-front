@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -81,7 +82,7 @@
                 </div>
                  <div  class="form-group" >
                      <text> Carrera :  </text>
-                     <select required>
+                     <select required name="carrera">
                          <option value="seleccione">Seleccione..</option>
                          <option value="ingInformatica">Ingenieria en Informatica</option>
                          <option value="anaProgramador">Analista Programador</option>
@@ -92,7 +93,7 @@
                 </div>
                 <div  class="form-group" >
                      <text> Track :  </text>
-                     <select required>
+                     <select required name="track">
                          <option value="seleccione">Seleccione..</option>
                          <option value="microControladores">Microcontroladores y Domotica</option>
                          <option value="desarrolloWeb">Desarrollo Web</option>
