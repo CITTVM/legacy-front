@@ -70,6 +70,12 @@ public class controllerCrearCuenta extends HttpServlet {
          
          
          Usuario usuario=new Usuario();
+         String rut=request.getParameter("rut");
+         if(rut.isEmpty()){
+            mapMensajes.put("Rut", "Debe Ingresar su rut !!");  
+         }else{
+             usuario.setRut(rut);
+         }
          
          String nombre=request.getParameter("nombre");
          if(nombre.isEmpty()){

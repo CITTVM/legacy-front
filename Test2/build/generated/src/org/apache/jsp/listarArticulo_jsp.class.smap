@@ -1,0 +1,14 @@
+SMAP
+listarArticulo_jsp.java
+JSP
+*S JSP
+*F
++ 0 listarArticulo.jsp
+listarArticulo.jsp
+*L
+5,11:54
+16:65,2
+17,44:67
+60:167,5
+60,37:113
+*E

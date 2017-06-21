@@ -54,12 +54,7 @@ public class controllerCrearCarrera extends HttpServlet {
             // ejemplo : request.setAttribute("lstPedidos", service.buscarPedidoProductoPedidoDetalle(rut));
              //request.getRequestDispatcher("/crearCarrera.jsp").forward(request, response); 
              
-             if (mapMensajes.isEmpty()) {
-                
-                 CarreraDAO carreraDAO= new CarreraDAO();
-                 carreraDAO.ingresar(carrera);
              
-             request.getRequestDispatcher("/crearCarrera.jsp").forward(request, response);
              
              
             }
@@ -74,4 +69,3 @@ public class controllerCrearCarrera extends HttpServlet {
 
  
 
-}

@@ -72,6 +72,9 @@
                 </div>
                 <h3 class="text-center">Datos Personales</h3>
                 <div class="form-group" style="max-width:50%; ">
+                    <input class="form-control" type="text" name="rut" placeholder="RUT">
+                </div>
+                <div class="form-group" style="max-width:50%; ">
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre Completo">
                 </div>
                 <div class="form-group" style="max-width:50%; ">
