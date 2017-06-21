@@ -1,6 +1,8 @@
 package Controllers;
 
 import Application.Carrera;
+import DAO.ArticuloDAO;
+import DAO.CarreraDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -47,10 +49,26 @@ public class controllerCrearCarrera extends HttpServlet {
                 carrera.setEscuela(escuela);
             }
          
-       
+              carrera.setIdCarrera(null);
          
             // ejemplo : request.setAttribute("lstPedidos", service.buscarPedidoProductoPedidoDetalle(rut));
-             request.getRequestDispatcher("/crearCarrera.jsp").forward(request, response);    
+             //request.getRequestDispatcher("/crearCarrera.jsp").forward(request, response); 
+             
+             if (mapMensajes.isEmpty()) {
+                
+                 CarreraDAO carreraDAO= new CarreraDAO();
+                 carreraDAO.ingresar(carrera);
+             
+             request.getRequestDispatcher("/crearArticulo.jsp").forward(request, response);
+             
+             
+            }
+             
+             
+             
+             
+             
+             
          
     }
 

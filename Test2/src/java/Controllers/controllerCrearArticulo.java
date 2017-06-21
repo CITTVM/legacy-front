@@ -2,6 +2,7 @@
 package Controllers;
 
 import Application.Articulo;
+import DAO.ArticuloDAO;
 import java.io.IOException; 
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -34,6 +35,13 @@ public class controllerCrearArticulo extends HttpServlet {
         
          Map<String, String> mapMensajes = new HashMap<>(); 
         Articulo articulo=new Articulo();
+        articulo.setCategoria(" ");
+        articulo.setDescripcion(" ");
+        articulo.setEstado(true);
+        articulo.setIdTrack(1);
+        articulo.setMarca(" ");
+        articulo.setNombre(" ");
+        articulo.setIdArticulo(null);
         
         
          String nombre= request.getParameter("nombre");
@@ -71,7 +79,7 @@ public class controllerCrearArticulo extends HttpServlet {
                 
             }
          
-         String numserie= request.getParameter("numserie");
+         String numserie= request.getParameter("numeroserie");
          if (numserie.isEmpty()) {
                 mapMensajes.put("NumSerie", "Debe Ingresar numero de serie");
             } else {
@@ -92,6 +100,16 @@ public class controllerCrearArticulo extends HttpServlet {
             }
          
          
+         if (mapMensajes.isEmpty()) {
+                
+             ArticuloDAO articuloDao= new ArticuloDAO();
+             
+             articuloDao.ingresar(articulo);
+             
+             request.getRequestDispatcher("/crearArticulo.jsp").forward(request, response);
+             
+             
+            }
          
 }
 }

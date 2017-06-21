@@ -11,10 +11,20 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_url_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -44,6 +54,7 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("\n");
@@ -54,20 +65,20 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    ");
       out.write("\n");
       out.write("    <link href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/bootstrap/css/bootstrap.min.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/bootstrap/css/bootstrap.min.css\">\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Lora\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/fonts/font-awesome.min.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/fonts/ionicons.min.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Article-Clean.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Article-List.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Carousel-Hero.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Footer-Dark.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Login-Form-Dark.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Navigation-with-Button1.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Projects-Horizontal.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Registration-Form-with-Photo.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/styles.css\">\n");
-      out.write("    <link rel=\"stylesheet\" href=\"Test2/assets/css/Team-Boxed.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/fonts/font-awesome.min.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/fonts/ionicons.min.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Article-Clean.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Article-List.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Carousel-Hero.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Footer-Dark.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Login-Form-Dark.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Navigation-with-Button1.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Projects-Horizontal.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Registration-Form-with-Photo.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/styles.css\">\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assets/css/Team-Boxed.css\">\n");
       out.write("</head>\n");
       out.write("\n");
       out.write("<body>\n");
@@ -96,47 +107,51 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    <div class=\"register-photo\">\n");
       out.write("        <div class=\"form-container\">\n");
       out.write("            <div class=\"image-holder\"></div>\n");
-      out.write("            <form method=\"post\">\n");
-      out.write("                <h2 class=\"text-center\"><strong>Creación</strong> de cuenta de usuario</h2>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("            <form action=\"");
+      if (_jspx_meth_c_url_0(_jspx_page_context))
+        return;
+      out.write("\" method=\"post\">\n");
+      out.write("                <center>\n");
+      out.write("                <h2 class=\"text-center\">Agregar Articulo</h2>\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"nombre\" placeholder=\"Nombre\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"descripcion\" placeholder=\"Descripcion \">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"observacion\" placeholder=\"Observacion (Opcional)\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"marca\" placeholder=\"Marca (Opcional)\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \"> \n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"modelo\" placeholder=\"Modelo (Opcional)\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"numeroserie\" placeholder=\"Numero de Serie (Opcional)\">\n");
       out.write("                </div>\n");
       out.write("                \n");
       out.write("                 <div  class=\"form-group\" >\n");
       out.write("                     <text> Disponibilidad:  </text>\n");
       out.write("                     <select >\n");
-      out.write("                         <option value=\"d\">Disponible</option>\n");
-      out.write("                         <option value=\"n\">No Disponible</option>\n");
+      out.write("                         <option value=\"true\">Disponible</option>\n");
+      out.write("                         <option value=\"false\">No Disponible</option>\n");
       out.write("                    </select>\n");
       out.write("                </div>  \n");
       out.write("                \n");
-      out.write("                <div class=\"form-group\">\n");
+      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"categoria\" placeholder=\"Categoria\">\n");
       out.write("                </div>\n");
       out.write("                \n");
       out.write("                <div class=\"form-group\">\n");
-      out.write("                    <button class=\"btn btn-primary btn-block\" type=\"submit\" style=\"background-color:rgb(43,133,0);\">Crear Producto</button>\n");
-      out.write("                </div></form>\n");
+      out.write("                    <button class=\"btn btn-primary btn-block\" type=\"submit\" style=\"background-color:rgb(43,133,0);max-width:50%;\">Crear Articulo</button>\n");
+      out.write("                </div></center></form>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
-      out.write("    <script src=\"Test2/assets/js/jquery.min.js\"></script>\n");
-      out.write("    <script src=\"Test2/assets/bootstrap/js/bootstrap.min.js\"></script>\n");
-      out.write("    <script src=\"Test2/assets/js/bs-animation.js\"></script>\n");
+      out.write("    <script src=\"assets/js/jquery.min.js\"></script>\n");
+      out.write("    <script src=\"assets/bootstrap/js/bootstrap.min.js\"></script>\n");
+      out.write("    <script src=\"assets/js/bs-animation.js\"></script>\n");
       out.write("</body>\n");
       out.write("\n");
       out.write("</html>\n");
@@ -152,5 +167,23 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_0.setParent(null);
+    _jspx_th_c_url_0.setValue("/controllerCrearArticulo");
+    int _jspx_eval_c_url_0 = _jspx_th_c_url_0.doStartTag();
+    if (_jspx_th_c_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+    return false;
   }
 }

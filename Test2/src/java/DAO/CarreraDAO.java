@@ -30,7 +30,7 @@ public class CarreraDAO {
             session.close();
         } catch (Exception ex) {
             tx.rollback();
-            throw new RuntimeException("No se pudo registrar la carrera");
+            throw new RuntimeException("No se pudo guardar la Carrera");
         }
     }
     

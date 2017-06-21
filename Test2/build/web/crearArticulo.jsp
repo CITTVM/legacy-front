@@ -57,9 +57,9 @@
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            <form action="<c:url value="/controllerCrearArticulo" />" method="post">
                 <center>
-                <h2 class="text-center"><strong>Creación</strong> de cuenta de usuario</h2>
+                <h2 class="text-center">Agregar Articulo</h2>
                 <div class="form-group" style="max-width:50%; ">
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
