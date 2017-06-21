@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="ArticuloWS">
-      <implementation-class>cl.service.webservices.ArticuloWS</implementation-class>
-    </service>
     <service name="WorkshopWS">
       <implementation-class>cl.service.webservices.WorkshopWS</implementation-class>
     </service>
@@ -33,6 +30,9 @@
     </service>
     <service name="CarreraWS">
       <implementation-class>cl.service.webservices.CarreraWS</implementation-class>
+    </service>
+    <service name="ArticuloWS">
+      <implementation-class>cl.service.webservices.ArticuloWS</implementation-class>
     </service>
     <service name="BoletinWS">
       <implementation-class>cl.service.webservices.BoletinWS</implementation-class>

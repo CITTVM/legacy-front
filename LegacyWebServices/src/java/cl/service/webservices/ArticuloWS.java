@@ -14,19 +14,41 @@ import javax.jws.WebParam;
 
 /**
  *
- * @author Jordan Silva O
+ * @author Jonathan
  */
 @WebService(serviceName = "ArticuloWS")
 public class ArticuloWS {
 
     /**
-     * Web service operation
+     * This is a sample web service operation
      */
     @WebMethod(operationName = "ListarArticulos")
     public List<Articulo> ListarArticulos() {
-        ArticuloDAO articuloDAO = new ArticuloDAO();
-        List<Articulo> listaArticulos = articuloDAO.findAll();
+        ArticuloDAO articulosdao = new ArticuloDAO();
+        List<Articulo> listaArticulos = articulosdao.findAll();
         return listaArticulos;
     }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "agregar")
+    public String agregar(@WebParam(name = "nombre") String nombre, @WebParam(name = "descripcion") String descripcion, @WebParam(name = "observacion") String observacion, @WebParam(name = "marca") String marca, @WebParam(name = "modelo") String modelo, @WebParam(name = "numero_serie") String numero_serie, @WebParam(name = "estado") boolean estado, @WebParam(name = "id_track") int id_track) {
+        ArticuloDAO articulodao = new ArticuloDAO();
+        Articulo articulo = new Articulo();
+        System.out.println(descripcion);
+        articulo.setIdArticulo(null);
+        articulo.setDescripcion(descripcion);
+        articulo.setEstado(estado);
+        articulo.setIdTrack(id_track);
+        articulo.setMarca(marca);
+        articulo.setModelo(modelo);
+        articulo.setNombre(nombre);
+        articulo.setNumeroSerie(numero_serie);
+        articulo.setObservacion(observacion);
+        articulodao.ingresar(articulo);
+        return null;
+    }
+    
     
 }

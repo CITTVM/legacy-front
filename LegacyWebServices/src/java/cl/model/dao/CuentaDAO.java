@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class CuentaDAO {
     
-    public void ingresarCuenta(Cuenta cuenta) {
+    public void ingresar(Cuenta cuenta) {
         SessionFactory sf = null;
         Session session = null;
         Transaction tx = null;
@@ -34,7 +34,7 @@ public class CuentaDAO {
         }
     }
     
-    public void modificarCuenta(Cuenta cuenta) {
+    public void modificar(Cuenta cuenta) {
         SessionFactory sf = null;
         Session session = null;
         Transaction tx = null;
@@ -51,7 +51,7 @@ public class CuentaDAO {
         }
     }
 
-    public int consultarCuenta(int codigo) {
+    public int consultar(int codigo) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Cuenta cuenta = (Cuenta) session.get(Cuenta.class, codigo);
@@ -69,6 +69,23 @@ public class CuentaDAO {
         List<Cuenta> lista = query.list();
         session.close();
         return lista;
+    }
+    
+    public void eliminar(int codigo) {
+        SessionFactory sf = null;
+        Session session = null;
+        Transaction tx = null;
+        try {
+            sf = HibernateUtil.getSessionFactory();
+            session = sf.openSession();
+            tx = session.beginTransaction();
+            session.delete(codigo);
+            tx.commit();
+            session.close();
+        } catch (Exception ex) {
+            tx.rollback();
+            throw new RuntimeException("No se pudo eliminar la cuenta");
+        }
     }
     
 }

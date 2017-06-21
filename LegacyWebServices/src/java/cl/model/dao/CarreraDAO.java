@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class CarreraDAO {
     
-    public void ingresarCarrera(Carrera carrera) {
+    public void ingresar(Carrera carrera) {
         SessionFactory sf = null;
         Session session = null;
         Transaction tx = null;
@@ -34,7 +34,7 @@ public class CarreraDAO {
         }
     }
     
-    public void modificarCarrera(Carrera carrera) {
+    public void modificar(Carrera carrera) {
         SessionFactory sf = null;
         Session session = null;
         Transaction tx = null;
@@ -51,7 +51,7 @@ public class CarreraDAO {
         }
     }
 
-    public int consultarCarrera(int codigo) {
+    public int consultar(int codigo) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Carrera carrera = (Carrera) session.get(Carrera.class, codigo);
@@ -69,6 +69,23 @@ public class CarreraDAO {
         List<Carrera> lista = query.list();
         session.close();
         return lista;
+    }
+    
+    public void eliminar(int codigo) {
+        SessionFactory sf = null;
+        Session session = null;
+        Transaction tx = null;
+        try {
+            sf = HibernateUtil.getSessionFactory();
+            session = sf.openSession();
+            tx = session.beginTransaction();
+            session.delete(codigo);
+            tx.commit();
+            session.close();
+        } catch (Exception ex) {
+            tx.rollback();
+            throw new RuntimeException("No se pudo eliminar la carrera");
+        }
     }
     
 }

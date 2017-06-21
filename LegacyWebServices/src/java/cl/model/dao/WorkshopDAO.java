@@ -72,4 +72,21 @@ public class WorkshopDAO {
         return lista;
     }
     
+    public void eliminar(int codigo) {
+        SessionFactory sf = null;
+        Session session = null;
+        Transaction tx = null;
+        try {
+            sf = HibernateUtil.getSessionFactory();
+            session = sf.openSession();
+            tx = session.beginTransaction();
+            session.delete(codigo);
+            tx.commit();
+            session.close();
+        } catch (Exception ex) {
+            tx.rollback();
+            throw new RuntimeException("No se pudo eliminar el workshop");
+        }
+    }
+    
 }

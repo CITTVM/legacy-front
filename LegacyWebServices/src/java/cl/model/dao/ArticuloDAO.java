@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class ArticuloDAO {
 
-    public void ingresarArticulo(Articulo articulo) {
+    public void ingresar(Articulo articulo) {
         SessionFactory sf = null;
         Session session = null;
         Transaction tx = null;
@@ -35,7 +35,7 @@ public class ArticuloDAO {
         }
     }
     
-    public void modificarArticulo(Articulo articulo) {
+    public void modificar(Articulo articulo) {
         SessionFactory sf = null;
         Session session = null;
         Transaction tx = null;
@@ -52,14 +52,14 @@ public class ArticuloDAO {
         }
     }
 
-    public int consultarProducto(int codigo) {
+    public Articulo consultar(int codigo) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Articulo articulo = (Articulo) session.get(Articulo.class, codigo);
         if (articulo != null) {
-            return 1;
+            return articulo;
         } else {
-            return 0;
+            return null;
         }
     }
     
@@ -70,6 +70,23 @@ public class ArticuloDAO {
         List<Articulo> lista = query.list();
         session.close();
         return lista;
+    }
+    
+    public void eliminar(int codigo) {
+        SessionFactory sf = null;
+        Session session = null;
+        Transaction tx = null;
+        try {
+            sf = HibernateUtil.getSessionFactory();
+            session = sf.openSession();
+            tx = session.beginTransaction();
+            session.delete(codigo);
+            tx.commit();
+            session.close();
+        } catch (Exception ex) {
+            tx.rollback();
+            throw new RuntimeException("No se pudo eliminar el articulo");
+        }
     }
     
 }

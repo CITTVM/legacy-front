@@ -14,7 +14,7 @@ import javax.jws.WebParam;
 
 /**
  *
- * @author camilo
+ * @author Jonathan
  */
 @WebService(serviceName = "BoletinWS")
 public class BoletinWS {
@@ -24,8 +24,8 @@ public class BoletinWS {
      */
     @WebMethod(operationName = "ListarBoletines")
     public List<Boletin> ListarBoletines() {
-        BoletinDAO boletindao = new BoletinDAO();
-        List<Boletin> listaBoletines = boletindao.findAll();
+        BoletinDAO boletinesdao = new BoletinDAO();
+        List<Boletin> listaBoletines = boletinesdao.findAll();
         return listaBoletines;
     }
     
