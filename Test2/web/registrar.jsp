@@ -33,7 +33,7 @@
 <body>
     <nav class="navbar navbar-default navigation-clean-button">
         <div class="container">
-            <div class="navbar-header"><a class="navbar-brand navbar-link" href="index.html">Proyecto LEGACY - Landing</a>
+            <div class="navbar-header"><a class="navbar-brand navbar-link" href="index.jsp">Proyecto LEGACY - Landing</a>
                 <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -41,7 +41,7 @@
                     <li role="presentation"><a href="index.jsp">Inicio </a></li>
                     <li role="presentation"><a href="noticias.jsp">Noticias </a></li>
                 </ul>
-                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="login.jsp">Entrar </a> <a class="btn btn-default action-button" role="button" href="registrar.jsp">Registro </a></p>
+                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="login.jsp">Entrar </a> <a class="btn btn-default action-button" role="button" href="crearCuenta.jsp">Registro </a></p>
                 <ul class="nav navbar-nav">
                     <li role="presentation"><a href="boletin.jsp">Boletín de Proyectos</a></li>
                     <li role="presentation"><a href="#">Talleres</a></li>

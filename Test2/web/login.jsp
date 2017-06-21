@@ -40,7 +40,7 @@
                     <li role="presentation"><a href="index.jsp">Inicio </a></li>
                     <li role="presentation"><a href="noticias.jsp">Noticias </a></li>
                 </ul>
-                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="#">Entrar </a> <a class="btn btn-default action-button" role="button" href="registrar.jsp">Registro </a></p>
+                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="#">Entrar </a> <a class="btn btn-default action-button" role="button" href="crearCuenta.jsp">Registro </a></p>
                 <ul class="nav navbar-nav">
                     <li role="presentation"><a href="boletin.jsp">Boletín de Proyectos</a></li>
                     <li role="presentation"><a href="#">Talleres</a></li>

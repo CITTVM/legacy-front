@@ -40,7 +40,7 @@
                     <li class="active" role="presentation"><a href="index.jsp">Inicio </a></li>
                     <li role="presentation"><a href="noticias.jsp">Noticias </a></li>
                 </ul>
-                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="login.jsp">Entrar </a> <a class="btn btn-default action-button" role="button" href="registrar.jsp">Registro </a></p>
+                <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="login.jsp">Entrar </a> <a class="btn btn-default action-button" role="button" href="crearCuenta.jsp">Registro </a></p>
                 <ul class="nav navbar-nav">
                     <li role="presentation"><a href="boletin.jsp">Boletín de Proyectos</a></li>
                     <li role="presentation"><a href="#">Talleres</a></li>
@@ -62,7 +62,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/desk.jpg"></a>
+                            <a href="#"><img class="img-responsive" src="img/desk.jpg"></a>                       
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -73,7 +73,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/building.jpg"></a>
+                            <a href="#"><img class="img-responsive" src="img/building.jpg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -84,7 +84,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/loft.jpg"></a>
+                            <a href="#"><img class="img-responsive" src="img/loft.jpg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -95,7 +95,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/minibus.jpeg"></a>
+                            <a href="#"><img class="img-responsive" src="img/minibus.jpeg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -112,7 +112,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/desk.jpg"></a>
+                            <a href="#"><img class="img-responsive" src="img/desk.jpg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -123,7 +123,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/building.jpg"></a>
+                            <a href="#"><img class="img-responsive" src="img/building.jpg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -134,7 +134,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/loft.jpg"></a>
+                            <a href="#"><img class="img-responsive" src="img/loft.jpg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
@@ -145,7 +145,7 @@
                 <div class="col-sm-6 item">
                     <div class="row">
                         <div class="col-md-5">
-                            <a href="#"><img class="img-responsive" src="assets/img/minibus.jpeg"></a>
+                            <a href="#"><img class="img-responsive" src="img/minibus.jpeg"></a>
                         </div>
                         <div class="col-md-7">
                             <h3 class="name">Project Name</h3>
