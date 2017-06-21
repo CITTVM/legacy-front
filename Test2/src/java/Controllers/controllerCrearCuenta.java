@@ -4,6 +4,9 @@ package Controllers;
 import Application.Carrera;
 import Application.Cuenta;
 import Application.Usuario;
+import DAO.CarreraDAO;
+import DAO.CuentaDAO;
+import DAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -91,14 +94,23 @@ public class controllerCrearCuenta extends HttpServlet {
          
          
          String carrera=request.getParameter("carrera");
+         usuario.setIdCarrera(1);
          
          //se debe rescatar el id de la carrera desde BD
          
          String track=request.getParameter("track");
+         usuario.setIdTrack(1);
+         usuario.setIdUsuario(1);
          
          //Se debe rescatar el id del track desde BD
          
-         
+         if (mapMensajes.isEmpty()) {
+               UsuarioDAO usuarioDao = new UsuarioDAO();
+               usuarioDao.ingresarUsuario(usuario);
+               CuentaDAO cuentaDao= new CuentaDAO();
+               cuentaDao.ingresar(cuenta);
+             
+             request.getRequestDispatcher("/crearCuenta.jsp").forward(request, response);
          
          
          
@@ -108,4 +120,5 @@ public class controllerCrearCuenta extends HttpServlet {
 
     
 
+}
 }

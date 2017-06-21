@@ -59,7 +59,7 @@ public class controllerCrearCarrera extends HttpServlet {
                  CarreraDAO carreraDAO= new CarreraDAO();
                  carreraDAO.ingresar(carrera);
              
-             request.getRequestDispatcher("/crearArticulo.jsp").forward(request, response);
+             request.getRequestDispatcher("/crearCarrera.jsp").forward(request, response);
              
              
             }

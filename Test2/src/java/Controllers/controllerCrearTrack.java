@@ -2,6 +2,8 @@
 package Controllers;
 
 import Application.Track;
+import DAO.CarreraDAO;
+import DAO.TrackDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -56,17 +58,22 @@ public class controllerCrearTrack extends HttpServlet {
         String nameLider = request.getParameter("lider");
         //nameLider = nombre+" "+apelPat
          //consultar id con el nombre para luego enviar el id a bd
+        track.setIdLider(1);                   
+                
+                
         
         
         
-        
-        
-            // ejemplo : request.setAttribute("lstPedidos", service.buscarPedidoProductoPedidoDetalle(rut));
-             request.getRequestDispatcher("/crearTrack.jsp").forward(request, response);  
+        if (mapMensajes.isEmpty()) {
+                
+                 TrackDAO trackDao= new TrackDAO();
+                 trackDao.ingresarTrack(track);
+             
+             request.getRequestDispatcher("/crearTrack.jsp").forward(request, response);
         
            
         
-        
+        }   
     }
 
     

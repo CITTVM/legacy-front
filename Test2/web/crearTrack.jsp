@@ -57,7 +57,7 @@
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            <form action="<c:url value="/controllerCrearTrack" />" method="post">
                 <center>
                 <h2 class="text-center">Creacion de Track</h2>
                 <div class="form-group" style="max-width:50%; " >

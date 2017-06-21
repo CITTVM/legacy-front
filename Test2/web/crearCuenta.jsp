@@ -57,7 +57,7 @@
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            <form action="<c:url value="/controllerCrearCuenta" />" method="post">
                 <center>
                 <h2 class="text-center"><strong>Creación de cuenta de usuario</strong></h2>
                 <h3 class="text-center">Datos de la cuenta</h3>
