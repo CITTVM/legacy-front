@@ -60,13 +60,13 @@
             <form method="post">
                 <center>
                 <h2 class="text-center">Creacion de Workshop</h2>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="nombreinstructor" placeholder="Nombre del Instructor">
                 </div>
                 
@@ -79,15 +79,15 @@
                     </select>
                 </div>  
                 
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="number" name="cupos" placeholder="Cupos Totales">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="date" name="fecha" step="1" min="2017-06-01" >
                 </div>
                 
                 
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Workshop</button>
                 </div></center></form>
         </div>

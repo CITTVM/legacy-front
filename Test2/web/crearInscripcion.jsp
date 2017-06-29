@@ -60,13 +60,13 @@
             <form method="post">
                 <center>
                 <h2 class="text-center"><strong>Inscribirme a Workshop</strong></h2>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="rut" placeholder="Rut de Asistente">
                 </div>
-                <div class="form-group" style="max-width:50%; "> 
+                <div class="form-group" > 
                     <input class="form-control" type="text" name="nombres" placeholder="Nombres Asistente">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="apellidos" placeholder="Apellidos Asistente">
                 </div>
                 

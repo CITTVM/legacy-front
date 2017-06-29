@@ -60,10 +60,10 @@
             <form action="<c:url value="/controllerCrearTrack" />" method="post">
                 <center>
                 <h2 class="text-center">Creacion de Track</h2>
-                <div class="form-group" style="max-width:50%; " >
+                <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group" style="max-width:50%;">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
                 </div>
                                

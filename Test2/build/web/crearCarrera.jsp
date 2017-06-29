@@ -60,10 +60,10 @@
             <form action="<c:url value="/controllerCrearCarrera" />" method="post">
                 <center>
                 <h2 class="text-center">Creacion de carreras</h2>
-                <div class="form-group" style="max-width:50%; "> 
+                <div class="form-group" > 
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre de la Carrera">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="escuela" placeholder="Escuela de la Carrera">
                 </div>
                 

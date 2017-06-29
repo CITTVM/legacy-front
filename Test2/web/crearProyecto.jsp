@@ -60,14 +60,14 @@
             <form method="post">
                 <center>
                 <h2 class="text-center">Creacion de Proyecto</h2>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
                 </div>   
                
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="date" name="fecha" step="1" min="2017-01-01" >
                 </div>
                 <div  class="form-group"  >
@@ -82,7 +82,7 @@
                 </div>    
                 
                 
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Proyecto</button>
                 </div></center></form>
         </div>

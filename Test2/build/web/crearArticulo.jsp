@@ -60,22 +60,22 @@
             <form action="<c:url value="/controllerCrearArticulo" />" method="post">
                 <center>
                 <h2 class="text-center">Agregar Articulo</h2>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="observacion" placeholder="Observacion (Opcional)">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="marca" placeholder="Marca (Opcional)">
                 </div>
-                <div class="form-group" style="max-width:50%; "> 
+                <div class="form-group" > 
                     <input class="form-control" type="text" name="modelo" placeholder="Modelo (Opcional)">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="numeroserie" placeholder="Numero de Serie (Opcional)">
                 </div>
                 
@@ -87,7 +87,7 @@
                     </select>
                 </div>  
                 
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="categoria" placeholder="Categoria">
                 </div>
                 

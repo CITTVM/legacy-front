@@ -61,26 +61,26 @@
                 <center>
                 <h2 class="text-center"><strong>Creación de cuenta de usuario</strong></h2>
                 <h3 class="text-center">Datos de la cuenta</h3>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="email" name="user-name" placeholder="Nombre de Usuario">
                 </div>
-                <div class="form-group" style="max-width:50%; "> 
+                <div class="form-group" > 
                     <input class="form-control" type="password" name="password" placeholder="Contraseña">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="password" name="password-repeat" placeholder="Contraseña (Repetir)">
                 </div>
                 <h3 class="text-center">Datos Personales</h3>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="rut" placeholder="RUT">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre Completo">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="apelpat" placeholder="Apellido Paterno">
                 </div>
-                <div class="form-group" style="max-width:50%; ">
+                <div class="form-group" >
                     <input class="form-control" type="text" name="apelmat" placeholder="Apellido Materno">
                 </div>
                  <div  class="form-group" >
