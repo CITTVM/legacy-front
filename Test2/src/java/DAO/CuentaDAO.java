@@ -88,4 +88,15 @@ public class CuentaDAO {
         }
     }
     
+    
+    
+    public List<Cuenta> find(String name) {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session session = sf.openSession();
+        Query query = session.createQuery("from Cuenta where Nickname='"+name+"'");
+        List<Cuenta> cuenta =  query.list();
+        session.close();
+        return cuenta;
+    }
+    
 }
