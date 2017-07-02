@@ -58,25 +58,22 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form method="post">
-                <center>
+                
                 <h2 class="text-center">Creacion de Proyecto</h2>
                 <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
                 </div>
                 <div class="form-group" >
                     <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
-                </div>   
+                </div>                
                
-                <div class="form-group" >
-                    <input class="form-control" type="date" name="fecha" step="1" min="2017-01-01" >
-                </div>
                 <div  class="form-group"  >
                      <text> Lider :   </text>
                      <select name="lider">
-                         <option value="simon">Simon Morales</option>
-                         <option value="jonas">Jonathan Gonzalez</option>
-                         <option value="sergio">Sergio Matamala</option>
-                         <option value="camilo">Camilo liJobs</option>
+                         <option value="seleccione">Seleccione..</option>
+                         <c:forEach var="v" items="${usuarios}">
+                             <option value="<c:out value="${v.getIdUsuario()}"/>"><c:out value="${v.getNombre()}"/> <c:out value="${v.getApellidoPaterno()}"></c:out></option>                            
+                         </c:forEach>  
                          
                     </select>
                 </div>    
@@ -84,7 +81,7 @@
                 
                 <div class="form-group" >
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Proyecto</button>
-                </div></center></form>
+                </div></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

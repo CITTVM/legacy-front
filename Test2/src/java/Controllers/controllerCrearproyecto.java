@@ -3,6 +3,10 @@ package Controllers;
 
 import Application.Carrera;
 import Application.Proyecto;
+import DAO.CarreraDAO;
+import DAO.ProyectoDAO;
+import DAO.TrackDAO;
+import DAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.Timestamp;
@@ -31,7 +35,16 @@ public class controllerCrearproyecto extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-       // List<String> lstLideres =
+       try {
+           
+           UsuarioDAO usuariodao = new UsuarioDAO();           
+          request.setAttribute("usuarios", usuariodao.findAll());
+          
+        } catch (Exception e) {
+        }
+                     
+        
+          request.getRequestDispatcher("/crearProyecto.jsp").forward(request, response);   
                 
         
     }
@@ -64,28 +77,27 @@ public class controllerCrearproyecto extends HttpServlet {
          
          
          //se debe mandar un tipo date a BD pendiente de parse*****
-         String fecha=request.getParameter("fecha");
+         String fecha=request.getParameter("fecha");         
          
+     
          
-         /*   --No se rescata ya que predeterminado el proyecto esta activo , pero este puede ser dado de baja al ser terminado
+         int idlider= Integer.parseInt(request.getParameter("lider"));
          
-         String strEstado = request.getParameter("estado");
-         if(strEstado.isEmpty()){
-             mapMensajes.put("Estado_proyecto", "Debe Selecciona Estado!!");
-         }else{
-             Boolean estado=  Boolean.getBoolean(strEstado)  ;
-             proyecto.setEstado(estado);
+         if (idlider>0) {
+            proyecto.setIdJefe(idlider);
+        }else{
+             mapMensajes.put("Lider", "Debe Seleccionar un Lider!!");
          }
-         */
+         proyecto.setFechaInicio(new java.sql.Date(System.currentTimeMillis()) );
          
-         
-         String nameLider= request.getParameter("lider");
-        //nameLider = nombre+" "+apelPat
-         //consultar id con el nombre para luego enviar el id a bd
-       
-         
-         
-         
+         if (mapMensajes.isEmpty()) {
+            
+             ProyectoDAO proyectodao = new ProyectoDAO();
+             proyectodao.ingresarProyecto(proyecto);
+             
+        }else{
+             request.getRequestDispatcher("/crearProyecto.jsp").forward(request, response); 
+         }
          
        
          
