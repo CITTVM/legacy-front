@@ -84,7 +84,7 @@ public final class listarArticulo_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("<body>\n");
       out.write("    <nav class=\"navbar navbar-default navigation-clean-button\">\n");
       out.write("        <div class=\"container\">\n");
-      out.write("            <div class=\"navbar-header\"><a class=\"navbar-brand navbar-link\" href=\"index.html\">Proyecto LEGACY - Landing</a>\n");
+      out.write("            <div class=\"navbar-header\"><a class=\"navbar-brand navbar-link\" href=\"index.jsp\">Proyecto LEGACY - Landing</a>\n");
       out.write("                <button class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navcol-1\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"collapse navbar-collapse\" id=\"navcol-1\">\n");
@@ -92,7 +92,7 @@ public final class listarArticulo_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                    <li role=\"presentation\"><a href=\"index.jsp\">Inicio </a></li>\n");
       out.write("                    <li role=\"presentation\"><a href=\"noticias.jsp\">Noticias </a></li>\n");
       out.write("                </ul>\n");
-      out.write("                <p class=\"navbar-text navbar-right actions\"><a class=\"navbar-link login\" href=\"login.jsp\">Entrar </a> <a class=\"btn btn-default action-button\" role=\"button\" href=\"registrar.jsp\">Registro </a></p>\n");
+      out.write("                <p class=\"navbar-text navbar-right actions\"><a class=\"navbar-link login\" href=\"login.jsp\">Entrar </a> <a class=\"btn btn-default action-button\" role=\"button\" href=\"crearCuenta.jsp\">Registro </a></p>\n");
       out.write("                <ul class=\"nav navbar-nav\">\n");
       out.write("                    <li role=\"presentation\"><a href=\"boletin.jsp\">Boletín de Proyectos</a></li>\n");
       out.write("                    <li role=\"presentation\"><a href=\"#\">Talleres</a></li>\n");

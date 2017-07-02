@@ -111,7 +111,7 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
       if (_jspx_meth_c_url_0(_jspx_page_context))
         return;
       out.write("\" method=\"post\">\n");
-      out.write("                <center>\n");
+      out.write("                \n");
       out.write("                <h2 class=\"text-center\">Agregar Articulo</h2>\n");
       out.write("                <div class=\"form-group\" >\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"nombre\" placeholder=\"Nombre\">\n");
@@ -146,7 +146,7 @@ public final class crearArticulo_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                \n");
       out.write("                <div class=\"form-group\">\n");
       out.write("                    <button class=\"btn btn-primary btn-block\" type=\"submit\" style=\"background-color:rgb(43,133,0);max-width:50%;\">Crear Articulo</button>\n");
-      out.write("                </div></center></form>\n");
+      out.write("                </div></form>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <script src=\"assets/js/jquery.min.js\"></script>\n");

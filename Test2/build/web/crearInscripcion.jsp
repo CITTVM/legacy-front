@@ -58,7 +58,7 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form method="post">
-                <center>
+                
                 <h2 class="text-center"><strong>Inscribirme a Workshop</strong></h2>
                 <div class="form-group" >
                     <input class="form-control" type="text" name="rut" placeholder="Rut de Asistente">
@@ -72,7 +72,7 @@
                 
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Registrar Inscripcion</button>
-                </div></center></form>
+                </div></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

@@ -4,6 +4,7 @@ package Controllers;
 import Application.Track;
 import DAO.CarreraDAO;
 import DAO.TrackDAO;
+import DAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -27,7 +28,16 @@ public class controllerCrearTrack extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+         try {
+           
+           UsuarioDAO usuariodao = new UsuarioDAO();           
+          request.setAttribute("usuarios", usuariodao.findAll());
+          
+        } catch (Exception e) {
+        }
+                     
         
+          request.getRequestDispatcher("/crearTrack.jsp").forward(request, response);   
     }
 
     
@@ -55,10 +65,14 @@ public class controllerCrearTrack extends HttpServlet {
             track.setDescripcion(descripcion);            
         }
         
-        String nameLider = request.getParameter("lider");
-        //nameLider = nombre+" "+apelPat
-         //consultar id con el nombre para luego enviar el id a bd
-        track.setIdLider(1);                   
+        
+         int idlider= Integer.parseInt(request.getParameter("lider"));
+         
+         if (idlider>0) {
+            track.setIdLider(idlider);
+        }else{
+             mapMensajes.put("Lider", "Debe Seleccionar un Lider!!");
+         }                  
                 
                 
         

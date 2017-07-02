@@ -58,7 +58,7 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form action="<c:url value="/controllerCrearArticulo" />" method="post">
-                <center>
+                
                 <h2 class="text-center">Agregar Articulo</h2>
                 <div class="form-group" >
                     <input class="form-control" type="text" name="nombre" placeholder="Nombre">
@@ -93,7 +93,7 @@
                 
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Articulo</button>
-                </div></center></form>
+                </div></form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

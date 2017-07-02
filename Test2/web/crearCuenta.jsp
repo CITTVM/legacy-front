@@ -58,7 +58,7 @@
         <div class="form-container">
             <div class="image-holder"></div>
             <form action="<c:url value="/controllerCrearCuenta" />" method="post">
-                <center>
+               
                 <h2 class="text-center"><strong>Creación de cuenta de usuario</strong></h2>
                 <h3 class="text-center">Datos de la cuenta</h3>
                 <div class="form-group" >
@@ -114,7 +114,7 @@
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Registrar Cuenta</button>
-                </div><a href="login.jsp" class="already">¿Ya tienes una cuenta? Entra aquí..</a></center></form>
+                </div><a href="login.jsp" class="already">¿Ya tienes una cuenta? Entra aquí..</a></form>
         </div>
              
     </div>
