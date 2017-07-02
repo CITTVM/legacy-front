@@ -87,22 +87,18 @@
                      <text> Carrera :  </text>
                      <select required name="carrera">
                          <option value="seleccione">Seleccione..</option>
-                         <option value="ingInformatica">Ingenieria en Informatica</option>
-                         <option value="anaProgramador">Analista Programador</option>
-                         <option value="disenoGrafico">Diseño Grafico</option>
-                         <option value="disenoInstustrial">Diseño Industrial</option>
-                         <option value="disenoVestuario">Diseño de vestuario</option>
+                         <c:forEach var="v" items="${carreras}">
+                            <option value="<c:out value="${v.getIdCarrera()}"/>"><c:out value="${v.getNombre()}"/></option>                            
+                         </c:forEach>   
                     </select>
                 </div>
                 <div  class="form-group" >
                      <text> Track :  </text>
                      <select required name="track">
-                         <option value="seleccione">Seleccione..</option>
-                         <option value="microControladores">Microcontroladores y Domotica</option>
-                         <option value="desarrolloWeb">Desarrollo Web</option>
-                         <option value="Legos">Legos</option>
-                         <option value="videojuegos">Videojuegos</option>
-                         <option value="appMoviles">Aplicaciones Moviles</option>
+                         <option value="0">Seleccione..</option>
+                         <c:forEach var="t" items="${tracks}">
+                            <option value="<c:out value="${t.getIdTrack()}"/>"><c:out value="${t.getNombre()}"/></option>                            
+                         </c:forEach>   
                     </select>
                 </div>
                 
@@ -120,6 +116,7 @@
                     <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Registrar Cuenta</button>
                 </div><a href="login.jsp" class="already">¿Ya tienes una cuenta? Entra aquí..</a></center></form>
         </div>
+             
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

@@ -6,16 +6,19 @@ import Application.Cuenta;
 import Application.Usuario;
 import DAO.CarreraDAO;
 import DAO.CuentaDAO;
+import DAO.TrackDAO;
 import DAO.UsuarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import sun.rmi.server.Dispatcher;
 
 /**
  *
@@ -31,7 +34,19 @@ public class controllerCrearCuenta extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        try {
+           CarreraDAO carreradao= new CarreraDAO();
+          request.setAttribute("carreras", carreradao.findAll());
+          TrackDAO trackdao= new TrackDAO();
+          request.setAttribute("tracks", trackdao.findAll());
+        } catch (Exception e) {
+        }
+                     
         
+          request.getRequestDispatcher("/crearCuenta.jsp").forward(request, response);   
+          
+          
+          
     }
 
     
@@ -99,22 +114,43 @@ public class controllerCrearCuenta extends HttpServlet {
          }
          
          
-         String carrera=request.getParameter("carrera");
-         usuario.setIdCarrera(1);
+         int carrera=Integer.parseInt(request.getParameter("carrera"));
+         if (carrera >0) {
+            usuario.setIdCarrera(carrera);
+        }else{
+             mapMensajes.put("Carrera", "Debe Ingresar una Carrera !!"); 
+         }         
          
-         //se debe rescatar el id de la carrera desde BD
+        
+         int track=Integer.parseInt(request.getParameter("track"));
+         if (track>0) {
+            usuario.setIdTrack(track);
+        }else{
+             mapMensajes.put("Track", "Debe Ingresar un Track !!"); 
+         }         
          
-         String track=request.getParameter("track");
-         usuario.setIdTrack(1);
-         usuario.setIdUsuario(1);
          
-         //Se debe rescatar el id del track desde BD
-         
+                  
          if (mapMensajes.isEmpty()) {
-               UsuarioDAO usuarioDao = new UsuarioDAO();
-               usuarioDao.ingresarUsuario(usuario);
                CuentaDAO cuentaDao= new CuentaDAO();
-               cuentaDao.ingresar(cuenta);
+               cuentaDao.ingresar(cuenta); 
+               
+               
+               
+              
+                       
+                       
+                       
+                       
+               UsuarioDAO usuarioDao = new UsuarioDAO();
+             List<Cuenta> cuen= cuentaDao.find(username);
+             for (Cuenta cu:cuen) {
+                 usuario.setIdCuenta(cu.getIdCuenta());
+             }
+               usuarioDao.ingresarUsuario(usuario);
+               
+               
+               
              
              request.getRequestDispatcher("/crearCuenta.jsp").forward(request, response);
          
@@ -122,7 +158,10 @@ public class controllerCrearCuenta extends HttpServlet {
          
          
         
-    }
+    }else{
+             
+            request.getRequestDispatcher("/crearCuenta.jsp").forward(request, response); 
+         }
 
     
 

@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 
@@ -53,14 +54,14 @@
         </div>
     </nav>
     <div class="login-dark">
-        <form method="post">
+        <form action="<c:url value="/controllerLogin" />" method="post">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
             <div class="form-group">
-                <input class="form-control" type="email" name="user-name" placeholder="Nombre de Usuario">
+                <input class="form-control" type="email" name="user-name" placeholder="Nombre de Usuario" required>
             </div>
             <div class="form-group">
-                <input class="form-control" type="password" name="password" placeholder="Contraseña">
+                <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
             </div>
             <div class="form-group">
                 <button class="btn btn-primary btn-block" type="submit">Iniciar Sesión</button>

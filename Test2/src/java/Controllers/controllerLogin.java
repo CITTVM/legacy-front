@@ -75,7 +75,23 @@ public class controllerLogin extends HttpServlet {
             }
     
             if (BDuser.getNickname().equalsIgnoreCase(pass)&&BDuser.getPass().equals(pass)) {
-                
+                switch (BDuser.getTipoCuenta()) {
+                    case "Administrador":
+                        request.getRequestDispatcher("/admin.jsp").forward(request, response);
+                        break;
+                    case "Coordinador":
+                        
+                        request.getRequestDispatcher("/coordinador.jsp").forward(request, response);
+                        break;
+                    case "Jefe":
+                        request.getRequestDispatcher("/jefe.jsp").forward(request, response);
+                        break;
+                    case "Basico":
+                        request.getRequestDispatcher("/basic.jsp").forward(request, response);
+                        break;
+                    default:
+                        request.getRequestDispatcher("/login.jsp").forward(request, response);
+                }
             }
             
             
