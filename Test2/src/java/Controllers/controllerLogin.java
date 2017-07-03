@@ -17,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.apache.jasper.tagplugins.jstl.ForEach;
 
 /**
@@ -73,8 +74,18 @@ public class controllerLogin extends HttpServlet {
                 BDuser.setTipoCuenta(cuen.getTipoCuenta());           
                 
             }
+            
+            
+            
+         
     
-            if (BDuser.getNickname().equalsIgnoreCase(username)&&BDuser.getPass().equals(pass)) {
+            if (BDuser.getNickname().equalsIgnoreCase(username)&&BDuser.getPass().equals(pass)) {               
+                
+
+               HttpSession session = request.getSession();
+               session.setAttribute("usuarioActivo", BDuser);
+                
+                
                 switch (BDuser.getTipoCuenta()) {
                     case "Administrador":
                         request.getRequestDispatcher("/admin.jsp").forward(request, response);
@@ -108,3 +119,36 @@ public class controllerLogin extends HttpServlet {
     
 
 }
+
+
+
+/*
+It should be
+
+session.getAttribute("usuarioActivo")
+
+
+
+
+I suggest you to use JavaServer Pages Standard Tag Library or Expression Language instead of Scriplet that is more easy to use and less error prone.
+
+
+${sessionScope.MyAttribute}
+
+
+or
+
+
+//no es necesaria est linea ya que esta lista en todos los jsp para que funcionencon jstl
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:out value="${sessionScope.usuarioActivo}" />
+
+
+
+you can try ${usuarioActivo}, ${sessionScope['usuarioActivo']} as well.
+
+
+
+
+*/
