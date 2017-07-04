@@ -57,7 +57,7 @@
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            <form action="<c:url value="/controllerCrearWorkshop" />" method="post">
                 
                 <h2 class="text-center">Creacion de Workshop</h2>
                 <div class="form-group" >
@@ -68,17 +68,9 @@
                 </div>
                 <div class="form-group" >
                     <input class="form-control" type="text" name="nombreinstructor" placeholder="Nombre del Instructor">
-                </div>
+                </div>               
                 
-                
-                 <div  class="form-group" >
-                     <text> Disponibilidad:  </text>
-                     <select >
-                         <option  value="true">Disponible</option>
-                         <option value="false">No Disponible</option>
-                    </select>
-                </div>  
-                
+                            
                 <div class="form-group" >
                     <input class="form-control" type="number" name="cupos" placeholder="Cupos Totales">
                 </div>

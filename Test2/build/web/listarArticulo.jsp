@@ -60,26 +60,39 @@
             <form action="<c:url value="/controllerCrearArticulo" />" method="post">
                 <center>
                     <div class="container">
-  <h2>Striped Rows</h2>
-  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <h2>Articulos</h2>
+  <p>Listado de articulos en el sistema</p> 
+  <p> </p>
   <table class="table table-striped">
     <thead>
       <tr>
-          <th>Numero de Serie</th>
+         
         <th>Nombre</th>
         <th>Descripcion</th>
         <th>Observacion</th>
         <th>Marca</th>
         <th>Modelo</th>
+        <th>Numero de Serie</th>
         <th>Disponibilidad</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
+        <c:forEach var="v" items="${articulos}">
+            <tr>
+                <td><c:out value="${v.getNombre()}"/></td>
+                <td><c:out value="${v.getDescripcion()}"/></td>
+                <td><c:out value="${v.getObservacion()}"/></td>
+                <td><c:out value="${v.getMarca()}"/></td>
+                <td><c:out value="${v.getModelo()}"/></td>
+                <td><c:out value="${v.getNumeroSerie()}"/></td>
+                <td><c:out value="${v.isEstado()}"/></td>
+             </tr>
+                             
+        </c:forEach> 
+        
+        
+        
+      
     </tbody>
   </table>
 </div>

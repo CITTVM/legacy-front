@@ -11,10 +11,20 @@ public final class crearWorkshop_jsp extends org.apache.jasper.runtime.HttpJspBa
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_url_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -41,6 +51,7 @@ public final class crearWorkshop_jsp extends org.apache.jasper.runtime.HttpJspBa
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("\n");
@@ -73,7 +84,7 @@ public final class crearWorkshop_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("<body>\n");
       out.write("    <nav class=\"navbar navbar-default navigation-clean-button\">\n");
       out.write("        <div class=\"container\">\n");
-      out.write("            <div class=\"navbar-header\"><a class=\"navbar-brand navbar-link\" href=\"index.html\">Proyecto LEGACY - Landing</a>\n");
+      out.write("            <div class=\"navbar-header\"><a class=\"navbar-brand navbar-link\" href=\"index.jsp\">Proyecto LEGACY - Landing</a>\n");
       out.write("                <button class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navcol-1\"><span class=\"sr-only\">Toggle navigation</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span></button>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"collapse navbar-collapse\" id=\"navcol-1\">\n");
@@ -81,7 +92,7 @@ public final class crearWorkshop_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                    <li role=\"presentation\"><a href=\"index.jsp\">Inicio </a></li>\n");
       out.write("                    <li role=\"presentation\"><a href=\"noticias.jsp\">Noticias </a></li>\n");
       out.write("                </ul>\n");
-      out.write("                <p class=\"navbar-text navbar-right actions\"><a class=\"navbar-link login\" href=\"login.jsp\">Entrar </a> <a class=\"btn btn-default action-button\" role=\"button\" href=\"registrar.jsp\">Registro </a></p>\n");
+      out.write("                <p class=\"navbar-text navbar-right actions\"><a class=\"navbar-link login\" href=\"login.jsp\">Entrar </a> <a class=\"btn btn-default action-button\" role=\"button\" href=\"crearCuenta.jsp\">Registro </a></p>\n");
       out.write("                <ul class=\"nav navbar-nav\">\n");
       out.write("                    <li role=\"presentation\"><a href=\"boletin.jsp\">Boletín de Proyectos</a></li>\n");
       out.write("                    <li role=\"presentation\"><a href=\"#\">Talleres</a></li>\n");
@@ -96,39 +107,34 @@ public final class crearWorkshop_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    <div class=\"register-photo\">\n");
       out.write("        <div class=\"form-container\">\n");
       out.write("            <div class=\"image-holder\"></div>\n");
-      out.write("            <form method=\"post\">\n");
-      out.write("                <center>\n");
+      out.write("            <form action=\"");
+      if (_jspx_meth_c_url_0(_jspx_page_context))
+        return;
+      out.write("\" method=\"post\">\n");
+      out.write("                \n");
       out.write("                <h2 class=\"text-center\">Creacion de Workshop</h2>\n");
-      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
+      out.write("                <div class=\"form-group\" >\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"nombre\" placeholder=\"Nombre\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
+      out.write("                <div class=\"form-group\" >\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"descripcion\" placeholder=\"Descripcion \">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
+      out.write("                <div class=\"form-group\" >\n");
       out.write("                    <input class=\"form-control\" type=\"text\" name=\"nombreinstructor\" placeholder=\"Nombre del Instructor\">\n");
-      out.write("                </div>\n");
+      out.write("                </div>               \n");
       out.write("                \n");
-      out.write("                \n");
-      out.write("                 <div  class=\"form-group\" >\n");
-      out.write("                     <text> Disponibilidad:  </text>\n");
-      out.write("                     <select >\n");
-      out.write("                         <option  value=\"true\">Disponible</option>\n");
-      out.write("                         <option value=\"false\">No Disponible</option>\n");
-      out.write("                    </select>\n");
-      out.write("                </div>  \n");
-      out.write("                \n");
-      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
+      out.write("                            \n");
+      out.write("                <div class=\"form-group\" >\n");
       out.write("                    <input class=\"form-control\" type=\"number\" name=\"cupos\" placeholder=\"Cupos Totales\">\n");
       out.write("                </div>\n");
-      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
+      out.write("                <div class=\"form-group\" >\n");
       out.write("                    <input class=\"form-control\" type=\"date\" name=\"fecha\" step=\"1\" min=\"2017-06-01\" >\n");
       out.write("                </div>\n");
       out.write("                \n");
       out.write("                \n");
-      out.write("                <div class=\"form-group\" style=\"max-width:50%; \">\n");
+      out.write("                <div class=\"form-group\" >\n");
       out.write("                    <button class=\"btn btn-primary btn-block\" type=\"submit\" style=\"background-color:rgb(43,133,0);max-width:50%;\">Crear Workshop</button>\n");
-      out.write("                </div></center></form>\n");
+      out.write("                </div></form>\n");
       out.write("        </div>\n");
       out.write("    </div>\n");
       out.write("    <script src=\"assets/js/jquery.min.js\"></script>\n");
@@ -150,5 +156,23 @@ public final class crearWorkshop_jsp extends org.apache.jasper.runtime.HttpJspBa
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_url_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_0 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_0.setParent(null);
+    _jspx_th_c_url_0.setValue("/controllerCrearWorkshop");
+    int _jspx_eval_c_url_0 = _jspx_th_c_url_0.doStartTag();
+    if (_jspx_th_c_url_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_0);
+    return false;
   }
 }

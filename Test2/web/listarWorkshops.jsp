@@ -1,6 +1,6 @@
 <%-- 
-    Document   : crearWorkshop
-    Created on : Jun 19, 2017, 11:40:47 PM
+    Document   : listarWorkshops
+    Created on : Jul 4, 2017, 12:17:03 PM
     Author     : jordan
 --%>
 
@@ -56,31 +56,44 @@
     </nav>
     <div class="register-photo">
         <div class="form-container">
-            <div class="image-holder"></div>
-            <form action="<c:url value="/controllerCrearWorkshop" />" method="post">
+            
+            <form  method="post">
                 
-                <h2 class="text-center">Creacion de Workshop</h2>
-                <div class="form-group" >
-                    <input class="form-control" type="text" name="nombre" placeholder="Nombre">
-                </div>
-                <div class="form-group" >
-                    <input class="form-control" type="text" name="descripcion" placeholder="Descripcion ">
-                </div>
-                <div class="form-group" >
-                    <input class="form-control" type="text" name="nombreinstructor" placeholder="Nombre del Instructor">
-                </div>               
+                 <table class="table table-striped">
+    <thead>
+      <tr>
+         
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Fecha</th>
+        <th>Cupos</th>
+        <th>Instructor</th>
+        <th>Inscribir</th>        
+      </tr>
+    </thead>
+    <tbody>
+        <c:forEach var="v" items="${workshops}">
+            <tr>
+                <td><c:out value="${v.getNombre()}"/></td>
+                <td><c:out value="${v.getDescripcion()}"/></td>
+                <td><c:out value="${v.getFecha()}"/></td>
+                <td><c:out value="${v.getCupos()}"/></td>
+                <td><c:out value="${v.getNombreInstructor()}"/></td>
+                <td><button  type="submit" name="id" <c:out value="${v.getIdWorkshop()}"/>   style=";max-width:60%;">Inscribirme</button></td>
                 
-                            
-                <div class="form-group" >
-                    <input class="form-control" type="number" name="cupos" placeholder="Cupos Totales">
-                </div>
-                <div class="form-group" >
-                    <input class="form-control" type="date" name="fecha" step="1" min="2017-06-01" >
-                </div>
                 
+             </tr>
+                             
+        </c:forEach> 
+        
+        
+        
+      
+    </tbody>
+  </table>
                 
-                <div class="form-group" >
-                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Workshop</button>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Articulo</button>
                 </div></form>
         </div>
     </div>
@@ -90,5 +103,4 @@
 </body>
 
 </html>
-
 

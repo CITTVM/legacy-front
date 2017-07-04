@@ -1,7 +1,7 @@
 
 package Controllers;
 
-import DAO.ArticuloDAO;
+import DAO.WorkshopDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,23 +12,25 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author shadoword
+ * @author jordan
  */
-@WebServlet(name = "controllerListarArticulo", urlPatterns = {"/controllerListarArticulo"})
-public class controllerListarArticulo extends HttpServlet {
-
-  
+@WebServlet(name = "controllerListarWorkshop", urlPatterns = {"/controllerListarWorkshop"})
+public class controllerListarWorkshop extends HttpServlet { 
+    
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        ArticuloDAO  articuloDao = new ArticuloDAO();
         
-        request.setAttribute("articulos", articuloDao.findAll());     
-              
-                
-       request.getRequestDispatcher("/listarArticulo.jsp").forward(request, response);  
+        WorkshopDAO workshopdao = new WorkshopDAO();
+        request.setAttribute("workshops", workshopdao.findAll());
+        
+        
+        request.getRequestDispatcher("/listarWorkshops.jsp").forward(request, response);  
+        
+        
+        
     }
 
     
@@ -36,11 +38,8 @@ public class controllerListarArticulo extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
-        
     }
 
-    
     
 
 }

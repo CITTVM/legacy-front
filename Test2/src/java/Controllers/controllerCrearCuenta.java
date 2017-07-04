@@ -35,7 +35,7 @@ public class controllerCrearCuenta extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-           CarreraDAO carreradao= new CarreraDAO();
+          CarreraDAO carreradao= new CarreraDAO();
           request.setAttribute("carreras", carreradao.findAll());
           TrackDAO trackdao= new TrackDAO();
           request.setAttribute("tracks", trackdao.findAll());
