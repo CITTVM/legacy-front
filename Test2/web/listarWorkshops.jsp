@@ -57,7 +57,7 @@
     <div class="register-photo">
         <div class="form-container">
             
-            <form  method="post">
+            <form action="<c:url value="/controllerCrearInscripcion" />" method="get">
                 
                  <table class="table table-striped">
     <thead>
@@ -79,7 +79,7 @@
                 <td><c:out value="${v.getFecha()}"/></td>
                 <td><c:out value="${v.getCupos()}"/></td>
                 <td><c:out value="${v.getNombreInstructor()}"/></td>
-                <td><button  type="submit" name="id" <c:out value="${v.getIdWorkshop()}"/>   style=";max-width:60%;">Inscribirme</button></td>
+                <td><button  type="submit" name="id" value="<c:out value="${v.getIdWorkshop()}"/>"   style=";max-width:60%;">Inscribirme</button></td>
                 
                 
              </tr>
@@ -91,10 +91,7 @@
       
     </tbody>
   </table>
-                
-                <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Crear Articulo</button>
-                </div></form>
+                </form>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

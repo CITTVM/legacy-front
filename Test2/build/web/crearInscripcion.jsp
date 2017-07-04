@@ -57,7 +57,8 @@
     <div class="register-photo">
         <div class="form-container">
             <div class="image-holder"></div>
-            <form method="post">
+            
+            <form action="<c:url value="/controllerCrearInscripcion" />" method="post">
                 
                 <h2 class="text-center"><strong>Inscribirme a Workshop</strong></h2>
                 <div class="form-group" >
@@ -71,7 +72,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(43,133,0);max-width:50%;">Registrar Inscripcion</button>
+                    <button class="btn btn-primary btn-block" type="submit"  style="background-color:rgb(43,133,0);max-width:50%;">Registrar Inscripcion</button>
                 </div></form>
         </div>
     </div>
