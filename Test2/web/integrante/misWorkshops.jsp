@@ -30,20 +30,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="integrante.Lobby.html">Admin Panel</a>
+                <a class="navbar-brand" href="integrante.Lobby.jsp">Admin Panel</a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
-                    <li><a href="integranteLobby.html"><i class="fa fa-home"></i> Lobby</a></li>
+                    <li><a href="integranteLobby.jsp"><i class="fa fa-home"></i> Lobby</a></li>
                     <li><a href="https://taiga.io/"><i class="fa fa-bullseye"></i> Taiga</a></li>
                     <li><a href="https://gogs.io/"><i class="fa fa-tasks"></i> Gogs</a></li>
-                    <li ><a href="misProductos.html"><i class="fa fa-area-chart"></i> Mis Productos</a></li>
-                    <li class="selected"><a href="misWorkshops.html"><i class="fa fa-globe"></i> Mis Workshops</a></li>
-                     <li><a href=""><i class="fa fa-globe"></i> Noticias</a></li>
+                    <li ><a href="misProductos.jsp"><i class="fa fa-area-chart"></i> Mis Productos</a></li>
+                    <li class="selected"><a href="misWorkshops.jsp"><i class="fa fa-globe"></i> Mis Workshops</a></li>
+                     <li><a href="../noticias.jsp"><i class="fa fa-globe"></i> Noticias</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Steve Miller<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><c:out value="${sessionScope.getNombre()}" /><<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
                             <li class="divider"></li>
