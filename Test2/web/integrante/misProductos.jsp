@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Integrante</title>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/dashboard/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/dashboard/font-awesome/css/font-awesome.min.css" />
@@ -43,7 +44,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><c:out value="${sessionScope.getNombre()}" /><<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><c:out value="${sessionScope.usuarioActivo.getNombre()}" /><<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
                         </ul>
