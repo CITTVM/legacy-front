@@ -29,4 +29,75 @@ public class BoletinWS {
         return listaBoletines;
     }
     
+    /**
+     * Metodo para hacer ingresos de nuevos boletines al servicio landing legacy.
+     * @param boletin
+     * @return 
+     */
+    @WebMethod(operationName = "AgregarBoletin")
+    public boolean AgregarBoletin(Boletin boletin) {
+        BoletinDAO boletindao = new BoletinDAO();
+        try {
+            boletindao.ingresar(boletin);
+            return true;
+        } catch (Exception e) {
+            String razon = e.toString();
+            return false;
+        }
+    }
+    
+    /**
+     * Metodo para hacer modificaciones de boletines existentes del servicio 
+     * landing legacy.
+     * @param boletin
+     * @return 
+     */
+    @WebMethod(operationName = "ModificarBoletin")
+    public boolean ModificarBoletin(Boletin boletin) {
+        BoletinDAO boletindao = new BoletinDAO();
+        try {
+            boletindao.modificar(boletin);
+            return true;
+        } catch (Exception e) {
+            String razon = e.toString();
+            return false;
+        }
+    }
+    
+    /**
+     * Metodo para hacer eliminaciones de boletines existentes del servicio 
+     * landing legacy.
+     * @param codigo
+     * @return 
+     */
+    @WebMethod(operationName = "EliminarBoletin")
+    public boolean EliminarBoletin(int codigo) {
+        BoletinDAO boletindao = new BoletinDAO();
+        try {
+            Boletin boletinAEliminar = boletindao.consultar(codigo);
+            boletindao.eliminar(codigo);
+            return true;
+        } catch (Exception e) {
+            String razon = e.toString();
+            return false;
+        }
+    }
+    
+    /**
+     * Metodo para hacer consulta de un boletin existente del servicio 
+     * landing legacy.
+     * @param codigo
+     * @return 
+     */
+    @WebMethod(operationName = "BuscarUnBoletin")
+    public boolean BuscarUnBoletin(int codigo) {
+        BoletinDAO boletindao = new BoletinDAO();
+        try {
+            boletindao.consultar(codigo);
+            return true;
+        } catch (Exception e) {
+            String razon = e.toString();
+            return false;
+        }
+    }
 }
