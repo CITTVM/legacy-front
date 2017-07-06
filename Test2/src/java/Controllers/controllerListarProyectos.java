@@ -25,7 +25,7 @@ public class controllerListarProyectos extends HttpServlet {
         
         
         ProyectoDAO proyectodao= new ProyectoDAO();
-        request.setAttribute("proyectos", proyectodao.findAll());        
+        request.setAttribute("proyectos", proyectodao.findAllCustom());        
         
         request.getRequestDispatcher("/listarProyectos.jsp").forward(request, response);  
         

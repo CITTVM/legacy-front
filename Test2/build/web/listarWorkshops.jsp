@@ -54,11 +54,16 @@
             </div>
         </div>
     </nav>
+    
+    
+    
     <div class="register-photo">
         <div class="form-container">
             
+            
             <form action="<c:url value="/controllerCrearInscripcion" />" method="get">
-                
+                <h2>Talleres Disponibles</h2>
+    <p>Aqui puedes revisar el listado de los talleres que ofrecemos actualmente</p> 
                  <table class="table table-striped">
     <thead>
       <tr>

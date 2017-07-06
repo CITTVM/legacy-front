@@ -73,11 +73,13 @@
     <tbody>
         <c:forEach var="v" items="${proyectos}">
             <tr>
-                <td><c:out value="${v.getNombre()}"/></td>
-                <td><c:out value="${v.getDescripcion()}"/></td>
-                <td><c:out value="${v.getFecha()}"/></td>
-                <td><c:out value="${v.getCupos()}"/></td>                
-                <td><button  type="submit" name="id" value="<c:out value="${v.getIdWorkshop()}"/>"   style=";max-width:60%;">Inscribirme</button></td>
+                <td><c:out value="${v.p.nombre}"/></td>
+                <td><c:out value="${v.p.descripcion}"/></td>
+                <td><c:out value="${v.p.fechaInicio}"/></td>
+                <td><c:out value="${v.p.cupos}"/></td>   
+                <td><c:out value="${v.u.nombre}"/> <c:out value="${v.u.apellidopaterno}"/> </td> 
+                
+                <td><button  type="submit" name="id"    style=";max-width:60%;">Inscribirme</button></td>
                 
                 
              </tr>

@@ -11,10 +11,20 @@ public final class adminCarreraLobby_jsp extends org.apache.jasper.runtime.HttpJ
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_out_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -48,6 +58,7 @@ public final class adminCarreraLobby_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("    <meta charset=\"utf-8\">\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
       out.write("    <title>Dashboard - AdminCarrera</title>\n");
+      out.write("    \n");
       out.write("    <link href=\"//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css\" rel=\"stylesheet\">\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/dashboard/bootstrap/css/bootstrap.min.css\" />\n");
       out.write("    <link rel=\"stylesheet\" type=\"text/css\" href=\"assets/dashboard/font-awesome/css/font-awesome.min.css\" />\n");
@@ -77,16 +88,19 @@ public final class adminCarreraLobby_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("            </div>\n");
       out.write("            <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n");
       out.write("                <ul id=\"active\" class=\"nav navbar-nav side-nav\">\n");
-      out.write("                    <li class=\"selected\"><a href=\"adminCarreraLobby.html\"><i class=\"fa fa-home\"></i> Lobby</a></li>\n");
+      out.write("                    <li class=\"selected\"><a href=\"adminCarreraLobby.jsp\"><i class=\"fa fa-home\"></i> Lobby</a></li>\n");
       out.write("                    <li><a href=\"https://taiga.io/\"><i class=\"fa fa-bullseye\"></i> Taiga</a></li>\n");
       out.write("                    <li><a href=\"https://gogs.io/\"><i class=\"fa fa-tasks\"></i> Gogs</a></li>\n");
-      out.write("                    <li><a href=\"portfolio.html\"><i class=\"fa fa-area-chart\"></i> Proyectos</a></li>\n");
-      out.write("                     <li><a href=\"\"><i class=\"fa fa-globe\"></i> Workshops</a></li>\n");
-      out.write("                     <li><a href=\"\"><i class=\"fa fa-globe\"></i> Noticias</a></li>\n");
+      out.write("                    <li><a href=\"portfolio.jsp\"><i class=\"fa fa-area-chart\"></i> Proyectos</a></li>\n");
+      out.write("                     <li><a href=\"../listarWorkshops.jsp\"><i class=\"fa fa-globe\"></i> Workshops</a></li>\n");
+      out.write("                     <li><a href=\"../noticias.jsp\"><i class=\"fa fa-globe\"></i> Noticias</a></li>\n");
       out.write("                </ul>\n");
       out.write("                <ul class=\"nav navbar-nav navbar-right navbar-user\">\n");
       out.write("                    <li class=\"dropdown user-dropdown\">\n");
-      out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-user\"></i> {User_name}<b class=\"caret\"></b></a>\n");
+      out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-user\"></i>");
+      if (_jspx_meth_c_out_0(_jspx_page_context))
+        return;
+      out.write("<<b class=\"caret\"></b></a>\n");
       out.write("                        <ul class=\"dropdown-menu\">\n");
       out.write("                            <li><a href=\"#\"><i class=\"fa fa-user\"></i> Perfil</a></li>\n");
       out.write("                            <li class=\"divider\"></li>\n");
@@ -167,5 +181,23 @@ public final class adminCarreraLobby_jsp extends org.apache.jasper.runtime.HttpJ
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_out_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_out_0.setParent(null);
+    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.usuarioActivo.getNickname()}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
+    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+      return true;
+    }
+    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+    return false;
   }
 }

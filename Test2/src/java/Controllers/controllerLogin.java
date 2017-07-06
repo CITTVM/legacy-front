@@ -75,17 +75,16 @@ public class controllerLogin extends HttpServlet {
                 
             }
             
-            
-            
-         
-    
+            try {
+                
+               
             if (BDuser.getNickname().equalsIgnoreCase(username)&&BDuser.getPass().equals(pass)) {               
                 
 
                HttpSession session = request.getSession();
                session.setAttribute("usuarioActivo", BDuser);
                 
-                
+               /* 
                 switch (BDuser.getTipoCuenta()) {
                     case "Administrador":
                         request.getRequestDispatcher("/adminnistracionLobby.jsp").forward(request, response);
@@ -103,14 +102,43 @@ public class controllerLogin extends HttpServlet {
                     default:
                         request.getRequestDispatcher("/login.jsp").forward(request, response);
                 }
+                */
+               
+               String tipoCuenta =BDuser.getTipoCuenta();
+               
+                if (tipoCuenta.equalsIgnoreCase("Basico")) {
+                   // request.getRequestDispatcher("/integrante/integranteLobby.jsp").forward(request, response);
+                response.sendRedirect("/Test2/integrante/integranteLobby.jsp");
+                }else if (tipoCuenta.equalsIgnoreCase("jefe")) {
+                    response.sendRedirect("/Test2/integrante/adminCarreraLobby.jsp");
+                }else if (tipoCuenta.equalsIgnoreCase("coordinador")) {
+                    response.sendRedirect("/Test2/integrante/coordinadorLobby.jsp");
+                }else if (tipoCuenta.equalsIgnoreCase("administrador")) {
+                    response.sendRedirect("/Test2/integrante/adminnistracionLobby.jsp");
+                }else{
+                    response.sendRedirect("/login.jsp");
+                }
+               
+               
+               
+               
             }
             
             
             
-        }else{
-            
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
-        }
+        
+                
+                
+                
+            } catch (Exception e) {
+                
+                String razon = e.toString();
+                
+            }
+           
+ 
+         
+    
         
         
     }
@@ -118,6 +146,7 @@ public class controllerLogin extends HttpServlet {
     
     
 
+}
 }
 
 

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Integrante</title>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/dashboard/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/dashboard/font-awesome/css/font-awesome.min.css" />
@@ -30,25 +31,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="integrante.Lobby.html">Admin Panel</a>
+                <a class="navbar-brand" href="integranteLobby.jsp">Admin Panel</a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
-                    <li><a href="integranteLobby.html"><i class="fa fa-home"></i> Lobby</a></li>
+                    <li><a href="integranteLobby.jsp"><i class="fa fa-home"></i> Lobby</a></li>
                     <li><a href="https://taiga.io/"><i class="fa fa-bullseye"></i> Taiga</a></li>
                     <li><a href="https://gogs.io/"><i class="fa fa-tasks"></i> Gogs</a></li>
-                    <li class="selected"><a href="misProductos.html"><i class="fa fa-area-chart"></i> Mis Productos</a></li>
-                    <li><a href="misWorkshops.html"><i class="fa fa-globe"></i> Mis Workshops</a></li>
+                    <li class="selected"><a href="misProductos.jsp"><i class="fa fa-area-chart"></i> Mis Productos</a></li>
+                    <li><a href="misWorkshops.jsp"><i class="fa fa-globe"></i> Mis Workshops</a></li>
                      <li><a href=""><i class="fa fa-globe"></i> Noticias</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Steve Miller<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><c:out value="${sessionScope.usuarioActivo.getNombre()}" /><<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                            <li class="divider"></li>
                             <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
-
                         </ul>
                     </li>
                 </ul>

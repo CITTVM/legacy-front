@@ -11,10 +11,20 @@ public final class integranteLobby_jsp extends org.apache.jasper.runtime.HttpJsp
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_out_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_out_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_out_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -45,6 +55,7 @@ public final class integranteLobby_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("<!DOCTYPE html>\n");
       out.write("<html lang=\"en\">\n");
       out.write("<head>\n");
+      out.write("    \n");
       out.write("    <meta charset=\"utf-8\">\n");
       out.write("    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
       out.write("    <title>Dashboard - Integrante</title>\n");
@@ -72,20 +83,23 @@ public final class integranteLobby_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("                    <span class=\"icon-bar\"></span>\n");
       out.write("                    <span class=\"icon-bar\"></span>\n");
       out.write("                </button>\n");
-      out.write("                <a class=\"navbar-brand\" href=\"integranteLobby.html\">Admin Panel</a>\n");
+      out.write("                <a class=\"navbar-brand\" href=\"integranteLobby.jsp\">Admin Panel</a>\n");
       out.write("            </div>\n");
       out.write("            <div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n");
       out.write("                <ul id=\"active\" class=\"nav navbar-nav side-nav\">\n");
-      out.write("                    <li class=\"selected\"><a href=\"integrandeLobby.html\"><i class=\"fa fa-home\"></i> Lobby</a></li>\n");
+      out.write("                    <li class=\"selected\"><a href=\"integrandeLobby.jsp\"><i class=\"fa fa-home\"></i> Lobby</a></li>\n");
       out.write("                    <li><a href=\"https://taiga.io/\"><i class=\"fa fa-bullseye\"></i> Taiga</a></li>\n");
       out.write("                    <li><a href=\"https://gogs.io/\"><i class=\"fa fa-tasks\"></i> Gogs</a></li>\n");
-      out.write("                    <li><a href=\"misProductos.html\"><i class=\"fa fa-area-chart\"></i> Mis Productos</a></li>\n");
-      out.write("                     <li><a href=\"misWorkshops.html\"><i class=\"fa fa-globe\"></i> Mis Workshops</a></li>\n");
-      out.write("                     <li><a href=\"\"><i class=\"fa fa-globe\"></i> Noticias</a></li>\n");
+      out.write("                    <li><a href=\"misProductos.jsp\"><i class=\"fa fa-area-chart\"></i> Mis Productos</a></li>\n");
+      out.write("                     <li><a href=\"misWorkshops.jsp\"><i class=\"fa fa-globe\"></i> Mis Workshops</a></li>\n");
+      out.write("                     <li><a href=\"../noticias.jsp\"><i class=\"fa fa-globe\"></i> Noticias</a></li>\n");
       out.write("                </ul>\n");
       out.write("                <ul class=\"nav navbar-nav navbar-right navbar-user\">\n");
       out.write("                    <li class=\"dropdown user-dropdown\">\n");
-      out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-user\"></i> {User_name}<b class=\"caret\"></b></a>\n");
+      out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-user\"></i> ");
+      if (_jspx_meth_c_out_0(_jspx_page_context))
+        return;
+      out.write("<b class=\"caret\"></b></a>\n");
       out.write("                        <ul class=\"dropdown-menu\">\n");
       out.write("                            <li><a href=\"#\"><i class=\"fa fa-user\"></i> Perfil</a></li>\n");
       out.write("                            <li class=\"divider\"></li>\n");
@@ -239,5 +253,23 @@ public final class integranteLobby_jsp extends org.apache.jasper.runtime.HttpJsp
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_out_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:out
+    org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_0 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
+    _jspx_th_c_out_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_out_0.setParent(null);
+    _jspx_th_c_out_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.usuarioActivo.getNombre()}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int _jspx_eval_c_out_0 = _jspx_th_c_out_0.doStartTag();
+    if (_jspx_th_c_out_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+      return true;
+    }
+    _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_0);
+    return false;
   }
 }

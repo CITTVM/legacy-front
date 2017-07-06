@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - AdminCarrera</title>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/dashboard/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/dashboard/font-awesome/css/font-awesome.min.css" />
@@ -34,16 +35,16 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
-                    <li class="selected"><a href="adminCarreraLobby.html"><i class="fa fa-home"></i> Lobby</a></li>
+                    <li class="selected"><a href="adminCarreraLobby.jsp"><i class="fa fa-home"></i> Lobby</a></li>
                     <li><a href="https://taiga.io/"><i class="fa fa-bullseye"></i> Taiga</a></li>
                     <li><a href="https://gogs.io/"><i class="fa fa-tasks"></i> Gogs</a></li>
-                    <li><a href="portfolio.html"><i class="fa fa-area-chart"></i> Proyectos</a></li>
-                     <li><a href=""><i class="fa fa-globe"></i> Workshops</a></li>
-                     <li><a href=""><i class="fa fa-globe"></i> Noticias</a></li>
+                    <li><a href="portfolio.jsp"><i class="fa fa-area-chart"></i> Proyectos</a></li>
+                     <li><a href="../listarWorkshops.jsp"><i class="fa fa-globe"></i> Workshops</a></li>
+                     <li><a href="../noticias.jsp"><i class="fa fa-globe"></i> Noticias</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
                     <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> {User_name}<b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><c:out value="${sessionScope.usuarioActivo.getNickname()}" /><<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
                             <li class="divider"></li>
