@@ -51,14 +51,14 @@ public class BoletinDAO {
         }
     }
 
-    public int consultar(int codigo) {
+    public Boletin consultar(int codigo) {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Boletin boletin = (Boletin) session.get(Boletin.class, codigo);
         if (boletin != null) {
-            return 1;
+            return boletin;
         } else {
-            return 0;
+            return new Boletin();
         }
     }
     
