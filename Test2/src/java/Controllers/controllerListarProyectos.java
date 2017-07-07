@@ -1,6 +1,7 @@
 
 package Controllers;
 
+import Application.Cuenta;
 import Application.ParticipantesProyectos;
 import Application.Usuario;
 import DAO.ParticipantesDAO;
@@ -46,7 +47,7 @@ public class controllerListarProyectos extends HttpServlet {
         
         
         HttpSession session = request.getSession();
-       Usuario usuarioActivo= (Usuario) session.getAttribute("usuarioActivo");
+       Cuenta usuarioActivo= (Cuenta) session.getAttribute("usuarioActivo");
        
        
        int id = Integer.parseInt(request.getParameter("id"));
@@ -58,13 +59,17 @@ public class controllerListarProyectos extends HttpServlet {
         }
         
         
-        if (usuarioActivo.getIdUsuario()!=null) {
-            participante.setIdUsuario(usuarioActivo.getIdUsuario());
+        if (usuarioActivo.getIdCuenta()!=null) {
+            participante.setIdUsuario(usuarioActivo.getIdCuenta());
         }else{
             mapMensajes.put("ID_Usuario", "No se puede verificar el id del Usuario seleccionado!!");
  
         }
        
+        ProyectoDAO proyectodao= new ProyectoDAO();
+        request.setAttribute("proyectos", proyectodao.findAllCustom());  
+        
+        
         
         if (mapMensajes.isEmpty()) {
             
@@ -76,7 +81,7 @@ public class controllerListarProyectos extends HttpServlet {
             
             
         }
-        
+        request.getRequestDispatcher("/login.jsp").forward(request, response); 
     }
 
 

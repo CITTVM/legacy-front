@@ -43,7 +43,7 @@
                 <p class="navbar-text navbar-right actions"><a class="navbar-link login" href="login.html">Entrar </a> <a class="btn btn-default action-button" role="button" href="crearCuenta.jsp">Registro </a></p>
                 <ul class="nav navbar-nav">
                     <li role="presentation"><a href="boletin.jsp">Boletín de Proyectos</a></li>
-                    <li role="presentation"><a href="#">Talleres</a></li>
+                    <li role="presentation"><a href="controllerListarWorkshop">Talleres</a></li>
                 </ul>
                 <ul class="nav navbar-nav">
                     <li role="presentation"><a href="https://tree.taiga.io/discover">LEGACY-Taiga </a></li>
