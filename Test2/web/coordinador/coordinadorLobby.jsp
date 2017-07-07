@@ -22,7 +22,7 @@
     <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper" style="margin-top: 30px;">
           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -51,7 +51,6 @@
                             <li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
                             <li class="divider"></li>
                             <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
-
                         </ul>
                     </li>
                 </ul>
@@ -79,9 +78,12 @@
                         </div>
                         <div class="panel-body feed">
                             <a class="twitter-timeline" data-width="400" data-height="400" data-theme="dark" href="https://twitter.com/CITTDuocUC">Tweets by CITTDuocUC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
     <!-- /#wrapper -->
     <script type="text/javascript">
 

@@ -21,7 +21,7 @@
     <script type="text/javascript" src="http://www.prepbootstrap.com/Content/js/gridData.js"></script>
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper"style="margin-top: 30px;">
           <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -34,7 +34,7 @@
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul id="active" class="nav navbar-nav side-nav">
-                    <li class="selected"><a href="integrandeLobby.jsp"><i class="fa fa-home"></i> Lobby</a></li>
+                    <li class="selected"><a href="integranteLobby.jsp"><i class="fa fa-home"></i> Lobby</a></li>
                     <li><a href="https://taiga.io/"><i class="fa fa-bullseye"></i> Taiga</a></li>
                     <li><a href="https://gogs.io/"><i class="fa fa-tasks"></i> Gogs</a></li>
                     <li><a href="misProductos.jsp"><i class="fa fa-area-chart"></i> Mis Productos</a></li>
@@ -76,9 +76,12 @@
                         </div>
                         <div class="panel-body feed">
                             <a class="twitter-timeline" data-width="400" data-height="400" data-theme="dark" href="https://twitter.com/CITTDuocUC">Tweets by CITTDuocUC</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
     <!-- /#wrapper -->
     <script type="text/javascript">
         jQuery(function ($) {
