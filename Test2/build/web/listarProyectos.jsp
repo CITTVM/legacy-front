@@ -57,7 +57,7 @@
     <div class="register-photo">
         <div class="form-container">
             
-            <form action="<c:url value="/controllerInscripcionProyecto" />" method="get">
+            <form action="<c:url value="/controllerListarProyectos" />" method="get">
                 
                  <table class="table table-striped">
     <thead>
@@ -65,21 +65,17 @@
          
         <th>Nombre</th>
         <th>Descripcion</th>
-        <th>Fecha</th>
-        <th>Lider</th>        
+        <th>Fecha</th>              
         <th>Inscribir</th>        
       </tr>
     </thead>
     <tbody>
         <c:forEach var="v" items="${proyectos}">
             <tr>
-                <td><c:out value="${v.p.nombre}"/></td>
-                <td><c:out value="${v.p.descripcion}"/></td>
-                <td><c:out value="${v.p.fechaInicio}"/></td>
-                <td><c:out value="${v.p.cupos}"/></td>   
-                <td><c:out value="${v.u.nombre}"/> <c:out value="${v.u.apellidopaterno}"/> </td> 
-                
-                <td><button  type="submit" name="id"    style=";max-width:60%;">Inscribirme</button></td>
+                <td><c:out value="${v.getNombre()}"/></td>
+                <td><c:out value="${v.getDescripcion()}"/></td>
+                <td><c:out value="${v.getFechaInicio()}"/></td>                               
+                <td><button  type="submit" name="id" value="<c:out value="${v.getIdProyecto()}"/>"   style=";max-width:60%;">Inscribirme</button></td>
                 
                 
              </tr>

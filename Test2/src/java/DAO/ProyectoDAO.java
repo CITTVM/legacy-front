@@ -93,10 +93,7 @@ public class ProyectoDAO {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Query query = session.createQuery
-        ("select p.id_proyecto,p.nombre,p.descripcion,"
-        + "p.fecha_inicio,u.nombre,u.apellidopaterno,"
-        + "u.apellidomaterno from proyecto p inner join usuario u "
-        + "on p.id_jefe=u.id_usuario where p.estado=true");
+        ("from Proyecto where estado=true");
         List<Object> lista = query.list();
         session.close();
         return lista;
